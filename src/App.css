@@ -6,7 +6,7 @@
   background-color: black
 }
 
-.Button{
+.navButton{
   background-color: black;
     border: 4px white;
     color: white;
@@ -19,6 +19,10 @@
   
 }
 
-.Button:hover{
+.navButton:hover{
   background-color: darkslategray
+}
+
+.navButton:active{
+  background-color: navy
 }
