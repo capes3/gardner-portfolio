@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
+import ContactForm from './ContactForm';
 
 
 class Appointment extends Component {
@@ -9,7 +10,7 @@ class Appointment extends Component {
         return(
             <div>
             <Navbar/>    
-            Appointment Placeholder
+            <ContactForm/>
             </div>
         )
     }
