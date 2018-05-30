@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
+import axios from 'axios'
 
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -47,6 +48,19 @@ class ContactForm extends Component {
         console.log(this.state)
         console.log(this.state.startDate._d);
         event.preventDefault();
+        
+        axios.post('/contact', {
+            firstName: this.state.firstName,
+            lastName: this.state.lastName,
+            startDate: this.state.startDate._d,
+            email: this.state.email
+        })
+        .then(function (response){
+            alert(response)
+        })
+        .catch(function(error){
+            alert(error)
+        })
       }
 
 
