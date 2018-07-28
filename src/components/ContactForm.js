@@ -15,7 +15,8 @@ class ContactForm extends Component {
             firstName:'',
             lastName:'',
             startDate:moment(),
-            email:''
+            email:'',
+            message:''
 
         }
 
@@ -23,6 +24,7 @@ class ContactForm extends Component {
         this.handleLastChange =this.handleLastChange.bind(this)
         this.handleEmailChange = this.handleEmailChange.bind(this)
         this.handleDateChange = this.handleDateChange.bind(this)
+        this.handleMessageChange = this.handleMessageChange.bind(this)
 
         this.handleSubmit =this.handleSubmit.bind(this)
   
@@ -44,6 +46,10 @@ class ContactForm extends Component {
         this.setState({startDate: date})
     }
 
+    handleMessageChange(event){
+        this.setState({message: event.target.value})
+    }
+
     handleSubmit(event) {
         console.log(this.state)
         console.log(this.state.startDate._d);
@@ -53,7 +59,8 @@ class ContactForm extends Component {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             startDate: this.state.startDate._d,
-            email: this.state.email
+            email: this.state.email,
+            message: this.state.message
         })
         .then(function (response){
             alert(response)
@@ -67,26 +74,28 @@ class ContactForm extends Component {
 
     render(){
         return(
-            <form onSubmit={this.handleSubmit}>
+            <form  className="homeContact" onSubmit={this.handleSubmit}>
+                <h1>Contact Us</h1>
                 <label>
-                    First:
-                    <input type="text" value={this.state.firstName} onChange={this.handleFirstChange}/>
+                    <input className="contactField" type="text" placeholder="First" value={this.state.firstName} onChange={this.handleFirstChange}/>
                  </label>
                  <label>
-                 Last:
-                    <input type="text" value={this.state.lastName} onChange={this.handleLastChange}/>
+                    <input className="contactField" type="text" placeholder="Last" value={this.state.lastName} onChange={this.handleLastChange}/>
                  </label>
                  <label>
-                     Email:
-                     <input type="text" value={this.state.email} onChange={this.handleEmailChange}/>
+                     <input className="contactField"type="text" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange}/>
                 </label>
-                <DatePicker 
+                {/* <DatePicker 
                 
                 selected={this.state.startDate}
                 onChange={this.handleDateChange}
                 
-                />
-                <input type="submit" value="Submit"/>
+                /> */}
+                <label>
+                    <textarea className="messageContactField" type="text" placeholder="Message" value={this.state.message} onChange={this.handleMessageChange}></textarea>
+                </label>
+                <span/>
+                <input className="submitButton" type="submit" value="Submit"/>
 
             </form>
         )

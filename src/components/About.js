@@ -1,32 +1,26 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
-import ContactForm from './ContactForm';
 import Footer from './Footer';
 
-
-class Appointment extends Component {
+class About extends Component {
 
     render(){
         return(
-            <div className="contactWrapper">
+            <div className="aboutWrapper">
                 <div className="head">
                 <Navbar/>
                 </div>
-                <div className="contactMap">
-                Map Placeholder
-                </div>
-                <div className="contact">
-                <ContactForm/>
-                </div>
+                <div className="aboutImage">3</div>
+                <div className="aboutBlurb">4</div>
+                <div className="aboutGallery">5</div>
+                <div className="reviews">6</div>
                 <div className="foot">
                 <Footer/>
                 </div>
-            
-            
             </div>
         )
     }
 }
 
-export default Appointment
+export default About

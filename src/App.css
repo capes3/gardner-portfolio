@@ -2,84 +2,342 @@
   text-align: center;
 }
 
-.navbarBackground{
-  background-color: black
+.homeWrapper{
+  display: grid;
+  width: 100%;
+  grid-template-areas:  "head"
+                        "nav"
+                        "main"
+                        "about"
+                        "gallery"
+                        "contact"
+                        "footer";
+
+  grid-template-rows: 20px 80px 550px 400px 600px 450px 60px;
+  grid-template-columns: 1fr; 
+}
+
+.contactWrapper{
+  display: grid;
+  width: 100%;
+  grid-template-areas:  "head"
+                        "nav"
+                        "map"
+                        "contact"
+                        "footer";
+
+  grid-template-rows: 20px 80px 300px 400px 60px ;
+  grid-template-columns: 1fr; 
+}
+
+
+.aboutWrapper{
+  display: grid;
+  width: 100%;
+  grid-template-areas:  "head"
+                        "nav"
+                        "aboutImage"
+                        "aboutBlurb"
+                        "aboutGallery"
+                        "reviews"
+                        "footer";
+
+  grid-template-rows: 20px 80px 200px 300px 200px 300px 60px ;
+  grid-template-columns: 1fr; 
+}
+
+
+.aboutImage{
+  grid-area: aboutImage; 
+  background-color: #115680;
+}
+
+.aboutBlurb{
+  grid-area: aboutBlurb;
+  background-color: #f3f3f3
+}
+
+.aboutGallery{
+  grid-area: aboutGallery;
+  background-color: #fe961b;
+}
+
+.reviews{
+  grid-area:reviews;
+  background-color: #f3f3f3;
+}
+
+.head{
+  grid-area: head;
+  background-color: #fe961b;
+}
+
+.nav{
+  grid-area: nav;
+  background-color: white;
+}
+
+.main{
+  grid-area: main;
+  background-color: #115680;
+  background-image: url(./Office/KJS_7288.jpg);
+  background-size:700px 800px;
+  background-position: 50% 75%;
+  position: relative;
+  overflow: hidden;
+}
+
+.colorOverlay{
+  background-color:#115680;
+  opacity: 0.5;
+  width:100%;
+  height:100%;
+  position: absolute;
+
+}
+
+.about{
+  grid-area: about;
+  background-color: white;
+  z-index: 1;
+}
+
+.gallery{
+  grid-area: gallery;
+  background-color: #fe961b;
+
+}
+
+.contact{
+  grid-area: contact;
+  background-color: white;
+
+}
+
+.foot{
+  grid-area: footer;
+  background-color: #292929;
+
+}
+
+
+.contactMap{
+  grid-area: map;
+  background-color: lightgray;
+}
+
+
+.header{
+  background-color:#fe961b;
+  height: 15px;
+}
+
+.contactHeader{
+  height: 15px;
+  display:flex;
+  float:left;
+  font-size: 10px;
+  color:white;
+  align-items: center;
+
+}
+
+
+
+.phone{
+ height:12px;
+ padding-left:10px;
+}
+
+.email{
+  height:12px;
+  padding-left:10px;
+}
+
+.socialHeader{
+  display:flex;
+  float:right;
+  font-size:10px;
+  color:white;
+  align-items: center;
+}
+.facebook{
+  height:12px;
+  padding-right:30px;
+}
+
+.navButtonHolder{
+  padding:10px;
+  
+}
+
+.navButtonAppt{
+ display: inline-block;
+ padding:0.75em 2em;
+ margin:0 0.3em 0.3em 0;
+ border-radius:0.85em;
+ border:none;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-weight:300;
+ color:#FFFFFF;
+ background-color:#115680;
+ text-align:center;
+ transition: all 0.2s;
 }
 
 .navButton{
-  background-color: black;
-    border: 4px white;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-  
+  background:none;
+  border:none;
+  color:#115680;
   
 }
 
-.navButton:hover{
-  background-color: darkslategray
-}
-
-.active{
-  background-color: red
-}
-
-.homeBackground{
-background-color: black
-}
 
 
 
-.homeImage{
-  background-color: rgba(17, 0, 255, 0.123);
-  opacity: 0.2 ;
-  width:100%;
-  height: 80vh;  
-}
+.navButtonApptMain{
+  display: inline-block;
+  padding:0.75em 2em;
+  margin-top:15%;
+  border-radius:0.85em;
+  border:none;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color:#fe961b;
+  text-align:center;
+  transition: all 0.2s;
+  position: relative;
 
-.iconsPlaceholder{
-  background-color: gray;
-  width:100%;
-  height:60vh;
 }
 
 
-
-.react-parallax-content{
-  width:100%;
-  height:60vh;
-  display: grid;
+.mainTitle {
+  color:white;
+  padding-top:45%;
+  position: relative;
 }
 
-.servicesContainer{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color:rgba(0,0,0,0.5) ;
-  padding: 10px;
+.mainParagraph {
+  color:white;
+  position: relative;
 }
 
-.gridItem{
-  background-color: #f1f1f1;
-  width: 25%;
-  height: 40%;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
+.mainHeader{
+  color:#115680;
 }
 
-.contactForm{
-  background-color: lightcyan;
-  width:100%;
-  height:40vh;
+.aboutParagraph{
+  color:#115680;
 }
 
-.mapHours{
-  background-color: rgb(8, 104, 248);
-  width:100%;
-  height:40vh;
+.mainGallery1{
+  color:white;
+  float:left;
+  padding-left:60px;
 }
+
+.mainGallery2{
+  color:#115680;
+  float:right;
+  padding-right:50px;
+}
+
+.galleryHeading{
+  margin:auto;
+  width:88%
+}
+
+.infoBar{
+  background-color:black;
+  border-radius: 0.85em;
+  color:white;
+  margin: auto;
+  width:80%;
+  padding:12px;
+}
+
+
+.contactFooter{
+  display:flex;
+  float:left;
+  margin-top:-5px;
+  font-size:8px;
+  align-items: center;
+}
+
+.phoneFooter{
+  height: 12px;
+}
+
+.emailFooter{
+  height: 12px;
+  
+}
+
+
+.socialFooter{
+  display:flex;
+  float:right;
+  margin-top:-5px;
+  font-size:8px;
+  align-items: center;
+}
+.facebookFooter{
+  height: 12px; 
+}
+
+
+.homeContact{
+  margin:auto;
+  padding-top:50px;
+}
+
+.contactField{
+  width: 75%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.submitButton{
+  display: inline-block;
+  padding:0.75em 2em;
+  border-radius:0.85em;
+  border:none;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-weight:300;
+  color:#FFFFFF;
+  background-color:#115680;
+  text-align:center;
+  transition: all 0.2s;
+}
+
+.messageContactField{
+  width: 75%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+
+
+
+
+
+
+
+
+
+

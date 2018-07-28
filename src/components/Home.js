@@ -2,35 +2,44 @@ import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar';
 import { Parallax } from 'react-parallax'
+import KJS_7288 from '../Office/KJS_7288.jpg'
+import KJS_7308 from '../Office/KJS_7308.jpg'
+import ContactForm from '../components/ContactForm'
+import Footer from '../components/Footer'
 
-const image1="https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D"
+
 class Home extends Component {
 
     render(){
         return(
-            <div>
-            <Navbar/>
-            <div className="homeBackground">
-            <img className="homeImage"src={image1}/>
-            </div>
+            <div className="homeWrapper">
+                <div className="head">
+                <Navbar/>
+                </div>
+                <div className="main">
+                    <div className="colorOverlay"></div>
+                    <h1 className="mainTitle">Smile with Confidence</h1>
+                    <p className="mainParagraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                    <button className="navButtonApptMain">Contact Us</button>
 
-            <Parallax className="iconsPlaceholder" bgImage={image1} blur={5} strength={300}>
-                
-                    <div className="servicesContainer">
-                        <div className="gridItem">1</div><div className="gridItem">4</div>
-                        <div className="gridItem">2</div><div className="gridItem">5</div>
-                        <div className="gridItem">3</div><div className="gridItem">6</div>
-                        
+                </div>
+                <div className="about">
+                    <h2 className="mainHeader">SED UT PERSPICIATIS UNDE</h2>
+                    <p className="aboutParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet eros bibendum ante vestibulum rutrum. Suspendisse potenti. Proin sed bibendum est. Nulla bibendum enim eu scelerisque vulputate. Quisque sit amet ante sed ex pulvinar sagittis sit amet sed erat. Maecenas consectetur ex eget faucibus gravida. Donec vel facilisis orci.</p>
+                </div>
+                <div className="gallery">
+                    <div className="galleryHeading">
+                    <h2 className="mainGallery1">OUR</h2><h2 className="mainGallery2">GALLERY</h2>
                     </div>
-                
-            </Parallax>
-            <div className="contactForm">
-                Contact Form placeholder
+                </div>
+                <div className="contact">
+                <ContactForm/>
+                </div>
+                <div className="foot">
+                <Footer/>
+                </div>
             </div>
-            <div className="mapHours">
-                Map and hours placeholder
-            </div>
-            </div>
+            
         )
     }
 }
