@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import phone from '../Office/phone-icon.png'
 import email from '../Office/email-icon.png'
 import facebook from '../Office/fb-icon.png'
+import logo from '../Office/GardnerLogo.png'
 
 
 
@@ -10,7 +11,7 @@ class Navbar extends Component {
 
     render(){
         return(
-            <div>
+            <div className="navWrapper">
             
             
             <div className="header">
@@ -25,9 +26,12 @@ class Navbar extends Component {
             <img src={facebook} className="facebook"/>
             </div>
             </div>
-                <div className="navButtonHolder">
-                    <div className="logo">Logo Placeholder</div>
+            <div className="logoWrapper">
+                <img src={logo} className="logo"/>
+            </div>
 
+                <div className="navButtonHolder">
+        
                         <Link to= '/'><button className="navButton">Home</button></Link>
                         <Link to= '/About'><button className="navButton">About</button></Link>
                         <Link to= '/Payments'><button className="navButton">Payments</button></Link>

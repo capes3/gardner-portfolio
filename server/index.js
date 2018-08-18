@@ -33,8 +33,8 @@ app.use('/contact', (req, res)=>{
     const mailOptions = {
         from: `${req.body.firstName}`+`${req.body.lastName}`,
         to:'capener.cade@gmail.com',
-        subject: "New Appointment Request",
-        text: `${req.body.firstName}`+" would like to schedule an appointment on "+`${req.body.startDate}`+" they can be contacted at "+`${req.body.email}`,
+        subject: "Contact request from "+`${req.body.firstName}`+" "+`${req.body.lastName}`,
+        text: "First Name:" + `${req.body.firstName}`+" Last Name:" + `${req.body.lastName}`+ " Message:" +`${req.body.message}`,
 
     }
     transporter.sendMail(mailOptions, function(err, res){

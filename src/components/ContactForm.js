@@ -23,7 +23,7 @@ class ContactForm extends Component {
         this.handleFirstChange =this.handleFirstChange.bind(this)
         this.handleLastChange =this.handleLastChange.bind(this)
         this.handleEmailChange = this.handleEmailChange.bind(this)
-        this.handleDateChange = this.handleDateChange.bind(this)
+        // this.handleDateChange = this.handleDateChange.bind(this)
         this.handleMessageChange = this.handleMessageChange.bind(this)
 
         this.handleSubmit =this.handleSubmit.bind(this)
@@ -42,9 +42,9 @@ class ContactForm extends Component {
         this.setState({email: event.target.value})
     }
 
-    handleDateChange(date){
-        this.setState({startDate: date})
-    }
+    // handleDateChange(date){
+    //     this.setState({startDate: date})
+    // }
 
     handleMessageChange(event){
         this.setState({message: event.target.value})
@@ -52,22 +52,20 @@ class ContactForm extends Component {
 
     handleSubmit(event) {
         console.log(this.state)
-        console.log(this.state.startDate._d);
+        // console.log(this.state.startDate._d);
         event.preventDefault();
         
         axios.post('/contact', {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
-            startDate: this.state.startDate._d,
+            // startDate: this.state.startDate._d,
             email: this.state.email,
             message: this.state.message
         })
         .then(function (response){
             alert(response)
         })
-        .catch(function(error){
-            alert(error)
-        })
+       
       }
 
 

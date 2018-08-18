@@ -9,7 +9,9 @@ class Footer extends Component {
     render(){
         return(
             <div className="footer">
-                <div className="footerLogo">LOGO</div>
+                <div className="footerLogo">
+                    
+                </div>
                 <div className="infoBar">
                     <div className="contactFooter">
                         <img src={phone} className="phoneFooter"/>

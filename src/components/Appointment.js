@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import ContactForm from './ContactForm';
 import Footer from './Footer';
+import  MapView  from './MapView';
+
 
 
 class Appointment extends Component {
@@ -14,7 +16,7 @@ class Appointment extends Component {
                 <Navbar/>
                 </div>
                 <div className="contactMap">
-                Map Placeholder
+                    <a className="mapLink" href="https://www.google.com/maps/dir//814+E+Main+St,+Tremonton,+UT+84337/">map link</a>
                 </div>
                 <div className="contact">
                 <ContactForm/>

@@ -1,7 +1,10 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
-import Footer from './Footer';
+import Footer from './Footer'
+import AboutGallery from './AboutGallery'
+
+
 
 class About extends Component {
 
@@ -9,12 +12,20 @@ class About extends Component {
         return(
             <div className="aboutWrapper">
                 <div className="head">
-                <Navbar/>
+                    <Navbar/>
                 </div>
-                <div className="aboutImage">3</div>
-                <div className="aboutBlurb">4</div>
-                <div className="aboutGallery">5</div>
-                <div className="reviews">6</div>
+                <div className="aboutImage">
+                        <div className="aboutOverlay"></div>
+                    <div className="aboutText">About Us</div>
+                </div>
+                <div className="aboutBlurb">
+                    <h2>SED UT PERSPICIATIS UNDE</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog. </p>
+                </div>
+                <div className="aboutGallery">
+                    <AboutGallery/>
+                
+                </div>
                 <div className="foot">
                 <Footer/>
                 </div>

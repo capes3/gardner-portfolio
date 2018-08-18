@@ -4,8 +4,8 @@ import Navbar from './Navbar';
 import { Parallax } from 'react-parallax'
 import KJS_7288 from '../Office/KJS_7288.jpg'
 import KJS_7308 from '../Office/KJS_7308.jpg'
-import ContactForm from '../components/ContactForm'
-import Footer from '../components/Footer'
+import ContactForm from './ContactForm'
+import Footer from './Footer'
 
 
 class Home extends Component {
@@ -29,7 +29,7 @@ class Home extends Component {
                 </div>
                 <div className="gallery">
                     <div className="galleryHeading">
-                    <h2 className="mainGallery1">OUR</h2><h2 className="mainGallery2">GALLERY</h2>
+                    <h2 className="mainGallery1">OUR OFFICE</h2>
                     </div>
                 </div>
                 <div className="contact">

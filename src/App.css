@@ -1,3 +1,8 @@
+*{
+  font-family: 'Merriweather Sans', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+}
+
 .App {
   text-align: center;
 }
@@ -13,7 +18,7 @@
                         "contact"
                         "footer";
 
-  grid-template-rows: 20px 80px 550px 400px 600px 450px 60px;
+  grid-template-rows: 20px 90px 500px 400px 600px 450px 60px;
   grid-template-columns: 1fr; 
 }
 
@@ -26,7 +31,7 @@
                         "contact"
                         "footer";
 
-  grid-template-rows: 20px 80px 300px 400px 60px ;
+  grid-template-rows: 20px 80px 465px 500px 60px ;
   grid-template-columns: 1fr; 
 }
 
@@ -39,10 +44,9 @@
                         "aboutImage"
                         "aboutBlurb"
                         "aboutGallery"
-                        "reviews"
                         "footer";
 
-  grid-template-rows: 20px 80px 200px 300px 200px 300px 60px ;
+  grid-template-rows: 20px 90px 200px 300px 400px 60px ;
   grid-template-columns: 1fr; 
 }
 
@@ -50,6 +54,18 @@
 .aboutImage{
   grid-area: aboutImage; 
   background-color: #115680;
+  background-image: url(./Office/KJS_7308.jpg);
+  background-size: 300px 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutOverlay{
+  background-color:#115680;
+  opacity: 0.8;
+  width:100%;
+  height:100%;
+  position: absolute;
 }
 
 .aboutBlurb{
@@ -60,6 +76,8 @@
 .aboutGallery{
   grid-area: aboutGallery;
   background-color: #fe961b;
+  position: relative;
+  text-align: center;
 }
 
 .reviews{
@@ -75,6 +93,19 @@
 .nav{
   grid-area: nav;
   background-color: white;
+}
+
+.logoWrapper{
+  text-align: center;
+  margin: 5px 0;
+  padding:5px;
+}
+
+.logo{
+  margin-top:-40px;
+  position: relative;
+  z-index: -1;
+  height: 120px;
 }
 
 .main{
@@ -102,6 +133,8 @@
   z-index: 1;
 }
 
+
+
 .gallery{
   grid-area: gallery;
   background-color: #fe961b;
@@ -117,15 +150,22 @@
 .foot{
   grid-area: footer;
   background-color: #292929;
-
 }
+
+
 
 
 .contactMap{
   grid-area: map;
-  background-color: lightgray;
+  background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+E+Main+St,+Tremonton,+UT+84337&zoom=15&scale=1&size=450x465&maptype=roadmap&key=AIzaSyA-LGAyE_rwI4N7p5x0DdL6XN5I6Ox-hv4&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x115680%7Clabel:1%7C814+E+Main+St,+Tremonton,+UT+84337);
 }
 
+.mapLink{
+  display:block;
+  height:100%;
+  width:100%;
+  text-indent:-9999px;
+}
 
 .header{
   background-color:#fe961b;
@@ -139,6 +179,7 @@
   font-size: 10px;
   color:white;
   align-items: center;
+  padding:2px;
 
 }
 
@@ -152,6 +193,7 @@
 .email{
   height:12px;
   padding-left:10px;
+  padding-right:5px;
 }
 
 .socialHeader{
@@ -160,21 +202,24 @@
   font-size:10px;
   color:white;
   align-items: center;
+  padding-top: 2px;
 }
 .facebook{
   height:12px;
-  padding-right:30px;
+  padding-right:20px;
+  padding-left:2px;
 }
 
 .navButtonHolder{
-  padding:10px;
+  padding-top:5px;
+  margin-top:-60px;
   
 }
 
 .navButtonAppt{
  display: inline-block;
- padding:0.75em 2em;
- margin:0 0.3em 0.3em 0;
+ padding:0.5em 1em;
+ margin:0 -1em 0em -2px;
  border-radius:0.85em;
  border:none;
  box-sizing: border-box;
@@ -218,6 +263,8 @@
   color:white;
   padding-top:45%;
   position: relative;
+  font-family: 'Great Vibes', cursive;
+  /* font-family: 'Allura', cursive; */
 }
 
 .mainParagraph {
@@ -235,15 +282,10 @@
 
 .mainGallery1{
   color:white;
-  float:left;
-  padding-left:60px;
+
 }
 
-.mainGallery2{
-  color:#115680;
-  float:right;
-  padding-right:50px;
-}
+
 
 .galleryHeading{
   margin:auto;
@@ -257,6 +299,7 @@
   margin: auto;
   width:80%;
   padding:12px;
+  margin-top:20px;
 }
 
 
@@ -292,7 +335,7 @@
 
 .homeContact{
   margin:auto;
-  padding-top:50px;
+  padding-top:20px;
 }
 
 .contactField{
@@ -331,9 +374,237 @@
   resize: vertical;
 }
 
+.aboutText{
+  color:white;
+  margin: 0 auto;
+  max-width: 100%; 
+  padding-top: 80px;
+  position: relative;
+  z-index: 1;
+  font-family: 'Great Vibes', cursive;
+  font-size: 25px;
+}
+
+.aboutBlurb h2 {
+  padding-top: 1.5em;
+}
+
+/* .slide{
+  width: 100%;
+  max-width: 300px;
+  height: 100%;
+  max-height: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+.carouselWrapper{
+  padding-top: 4em;
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 375px){
+  .homeWrapper{
+    display: grid;
+    width: 100%;
+    grid-template-areas:  "head"
+                          "nav"
+                          "main"
+                          "about"
+                          "gallery"
+                          "contact"
+                          "footer";
+  
+    grid-template-rows: 20px 90px 500px 300px 600px 450px 60px;
+    grid-template-columns: 1fr; 
+  }
+
+  .mainHeader{
+    padding-top:20px;
+  }
+
+  .mainTitle{
+    padding-top: 36%;
+  }
+  
+
+  .mainGallery1{
+    color:white;
+  
+   }
 
 
 
+ 
+}
+
+
+@media only screen and (min-width: 425px){
+
+  .mainTitle{
+    padding-top:35%;
+  }
+
+  .galleryHeading{
+    padding-top:10px;
+  }
+  .mainGallery1{
+    color:white;
+ }
+
+
+    
+  .submitButton{
+    padding: 0.75em 3em;
+  }
+
+}
+
+@media only screen and (min-width: 768px){
+  .navButtonHolder{
+    float: right;
+    margin-right: 30px;
+    margin-top: -5px;
+  }
+
+  .logo{
+    height: 165px;
+    float:left;
+    padding-left:20px;
+    margin-top: -55px;
+    }
+
+
+  .homeWrapper{
+    grid-template-rows: 20px 65px 500px 300px 350px 500px 70px;
+  }
+
+  .mainTitle{
+    font-size: 45px;
+    padding-top: 15%;
+  }
+
+  .mainParagraph{
+    font-size: 20px;
+    padding: 0px 65px;
+  }
+
+  .navButtonApptMain{
+    margin-top:5%;
+  }
+
+  .mainHeader{
+    padding-top:40px;
+  }
+
+  .aboutParagraph{
+    padding: 0px 40px 
+  }
+
+  .mainGallery1{
+    font-size:30px;
+
+  }
+
+
+
+  .contactField{
+    width:85%;
+  }
+
+  .messageContactField{
+    width:85%;
+    height: 85px;
+  }
+
+}
+
+@media only screen and (min-width: 768px){
+
+
+  .homeWrapper{
+    grid-template-rows: 25px 70px 500px 300px 350px 500px 70px;
+  }
+
+  .header{
+    height:25px;
+  }
+
+  .contactHeader{
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  .socialHeader{
+    font-size: 12px;
+    padding:4px;
+  }
+
+  .facebook{
+    padding-left: 8px;
+  }
+
+  .facebookFooter {
+    height: 12px;
+    padding: 0px 5px 0px 8px;
+}
+
+.phoneFooter {
+  height: 12px;
+  padding: 0px 6px 0px 4px;
+}
+
+.emailFooter {
+  height: 12px;
+  padding: 0px 4px 0px 12px;
+  text-shadow: 0 0 black;
+}
+
+  .submitButton {
+    padding: 1em 4em;
+}
+
+  .contactField{
+    width:90%;
+  }
+
+  .messageContactField{
+    width: 90%;
+  }
+
+  .main{
+    background-size: 1025px 850px;
+    background-position: 35% 70%;
+  }
+
+  .mainTitle {
+    font-size: 50px;
+    padding-top: 10%;
+}
+
+.navButtonApptMain {
+  margin-top: 2%;
+  padding: 1em 3em;
+
+}
+
+  .mainHeader {
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+  .aboutParagraph {
+    padding: 0px 70px;
+    font-size: 19px;
+}
+
+
+
+
+}
 
 
 
