@@ -601,7 +601,12 @@ font-family: 'Nunito Sans', sans-serif;
     font-size: 19px;
 }
 
-
+.contactMap{
+background-color: #115680;
+background-position: center;
+background-repeat:no-repeat;
+background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+E+Main+St,+Tremonton,+UT+84337&zoom=15&scale=2&size=640x400&maptype=roadmap&key=AIzaSyA-LGAyE_rwI4N7p5x0DdL6XN5I6Ox-hv4&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x115680%7Clabel:1%7C814+E+Main+St,+Tremonton,+UT+84337);
+}
 
 
 }
