@@ -17,13 +17,15 @@ class Navbar extends Component {
             <div className="header">
             <div className="contactHeader">
                 <img src={phone} className="phone"/>
-                123 456 7890
+                (435) 257-3880
                 <img src={email} className="email"/>
                 fake_email@email.com
             </div>
             <div className="socialHeader">
             follow us on:
+            <a href="https://www.facebook.com/gardner.dental" >
             <img src={facebook} className="facebook"/>
+            </a>
             </div>
             </div>
             <div className="logoWrapper">
@@ -34,7 +36,8 @@ class Navbar extends Component {
         
                         <Link to= '/'><button className="navButton">Home</button></Link>
                         <Link to= '/About'><button className="navButton">About</button></Link>
-                        <Link to= '/Payments'><button className="navButton">Payments</button></Link>
+                        <a className="navButton" href="https://www.ident.ws/template_include/pi_login.jsp?site=13488&practiceId=28270&page=Patient+Information"> Payments</a>
+                        <a className="navButton" href="https://www.ident.ws/template_include/new_patient_sign_in.do?site=13488&practiceId=28270">New Patient Form</a>
                         <Link to= '/Appointment'><button className="navButtonAppt">Appointments</button></Link>
                         
                     </div>
