@@ -491,6 +491,10 @@ div a {
 
 @media only screen and (min-width: 425px){
 
+  .homeWrapper{
+    grid-template-rows: 20px 90px 500px 400px 600px 450px 60px;
+  }
+
   .mainTitle{
     padding-top:35%;
   }
