@@ -11,7 +11,7 @@ class AboutGallery extends Component{
     }
 
     componentDidMount(){
-         axios.get(	' https://api.cloudinary.com/v1_1/gardner-dental/image/upload')
+         axios.get(	' http://res.cloudinary.com/gardnerDental/image/list/gardner.json ')
             .then(res =>{
                 console.log(res.data.resources);
                 this.setState({gallery: res.data.resources})
@@ -24,24 +24,29 @@ class AboutGallery extends Component{
            <div className="aboutMain">
                <h1 className="aboutGalleryTitle">OurWork</h1>
                <div>
-                   <CloudinaryContext cloudName="gardner-dental">
-                   {
+               <CloudinaryContext cloudName="gardnerDental">
+                        {
                             this.state.gallery.map(data => {
                                 return (
                                     <div className="responsive" key={data.public_id}>
-                                    <div className="img">
-                                        <a target="_blank" href={`http://res.cloudinary.com/gardner-dental/image/upload/${data.public_id}.jpg`}>
-                                            <Image publicId={data.public_id} signUrl="true" type="authenticated">
-                                              
-                                            </Image>
-                                        </a>
-                                        <div className="desc">Created at {data.created_at}</div>
+                                        <div className="img">
+                                            <a target="_blank" href={`https://res.cloudinary.com/gardnerDental/image/upload/${data.public_id}.jpg`}>
+                                                <Image publicId={data.public_id}>
+                                                    <Transformation
+                                                        crop="scale"
+                                                        width="300"
+                                                        height="200"
+                                                        dpr="auto"
+                                                        responsive_placeholder="blank"
+                                                    />
+                                                </Image>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
                                 )
                             })
                         }
-                   </CloudinaryContext>
+                    </CloudinaryContext>
                </div>
            </div>
             );

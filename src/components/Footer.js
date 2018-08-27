@@ -15,7 +15,7 @@ class Footer extends Component {
                 <div className="infoBar">
                     <div className="contactFooter">
                         <img src={phone} className="phoneFooter"/>
-                        123-456-7890
+                        (435) 257-3880
                         <img src={email} className="emailFooter"/> 
                         email@gmail.com
                     </div>

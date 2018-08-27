@@ -58,6 +58,7 @@ font-family: 'Nunito Sans', sans-serif;
   background-size: 300px 300px;
   position: relative;
   overflow: hidden;
+  margin-top: 5px;
 }
 
 .aboutOverlay{
@@ -396,7 +397,7 @@ div a {
 
 .submitButton{
   display: inline-block;
-  padding:0.75em 2em;
+  padding:0.75em 3em;
   border-radius:0.85em;
   border:none;
   box-sizing: border-box;
@@ -432,6 +433,7 @@ div a {
 
 .aboutBlurb h2 {
   padding-top: 1.5em;
+  padding: 0.5em 0.5em 0px;
 }
 
 /* .slide{
@@ -449,6 +451,13 @@ div a {
   padding-top: 4em;
   width: 75%;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 350px){
+  .logoWrapper {
+
+    padding: 0px 0px 0px 15px;
+}
 }
 
 @media only screen and (min-width: 375px){
@@ -485,11 +494,17 @@ div a {
      padding: 0px 0px 0px 25px;
    }
 
+
+
+   .aboutImage{
+    background-size: 400px 300px;
+  }  
+
  
 }
 
 
-@media only screen and (min-width: 425px){
+@media only screen and (min-width: 400px){
 
   .homeWrapper{
     grid-template-rows: 20px 90px 500px 400px 600px 450px 60px;
@@ -524,13 +539,24 @@ div a {
     padding: 0.75em 3em;
   }
 
+  .aboutImage{
+    background-size: 500px 300px;
+  }  
+
+  .navButtonAppt{
+    padding: 0.5em 2.5em;
+    margin-top: 3px;
+  }
+
+
+
 }
 
 @media only screen and (min-width: 768px){
   .navButtonHolder{
     float: right;
     margin-right: 30px;
-    margin-top: -5px;
+    margin-top: 7px;
   }
 
   .logo{
@@ -582,6 +608,24 @@ div a {
     width:85%;
     height: 85px;
   }
+
+  .aboutWrapper {
+    grid-template-rows: 20px 75px 250px 300px 400px 60px;
+}
+.aboutText {
+  margin: 10px auto;
+  font-size: 35px;
+}
+
+.aboutImage {
+  background-size: 800px 300px;
+}
+
+.aboutParagraph{
+  padding: 0px 75px;
+}
+
+
 
 }
 
@@ -655,6 +699,10 @@ div a {
 
 }
 
+.navButton{
+  font-weight: bold;
+}
+
   .mainHeader {
     padding-top: 20px;
     font-size: 30px;
@@ -670,11 +718,190 @@ div a {
 background-color: #115680;
 background-position: center;
 background-repeat:no-repeat;
-background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+E+Main+St,+Tremonton,+UT+84337&zoom=15&scale=2&size=640x400&maptype=roadmap&key=AIzaSyA-LGAyE_rwI4N7p5x0DdL6XN5I6Ox-hv4&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x115680%7Clabel:1%7C814+E+Main+St,+Tremonton,+UT+84337);
+background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+E+Main+St,+Tremonton,+UT+84337&zoom=15&scale=2&size=600x400&maptype=roadmap&key=AIzaSyA-LGAyE_rwI4N7p5x0DdL6XN5I6Ox-hv4&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x115680%7Clabel:1%7C814+E+Main+St,+Tremonton,+UT+84337);
+}
+
+.rightChair {
+  visibility: visible;
+  height: 290px;
+  width: 165px;
+  border: 5px solid white;
+  position: relative;
+  right: 540px;
+}
+
+.leftChair {
+  visibility: visible;
+  height: 290px;
+  width: 165px;
+  border: 5px solid white;
+  position: relative;
+  top: -306px;
+  left: 280px;
+}
+
+.imageHolder {
+  padding-top: 35px;
+}
+
+.officeImg {
+  height: 150px;
+  width: 260px;
+  border: 5px solid white;
+  margin-top: 40px;
+  position: relative;
+  top: 0px;
+  right: 45px;
+}
+
+.signImg {
+  height: 115px;
+  width: 260px;
+  border: 5px solid white;
+  position: relative;
+  right: -225px;
+  bottom: 180px;
 }
 
 
 }
+
+@media only screen and (min-width: 899px){
+
+  .leftChair {
+    visibility: visible;
+    height: 325px;
+    width: 180px;
+    border: 5px solid white;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+.rightChair {
+  visibility: visible;
+  height: 325px;
+  width: 180px;
+  border: 5px solid white;
+  position: relative;
+  right: 540px;
+}
+
+.homeWrapper{
+  grid-template-rows: 25px 70px 500px 300px 450px 500px 70px;
+}
+
+.signImg {
+  height: 130px;
+  width: 340px;
+  margin-right: -45px;
+  border: 5px solid white;
+  position: relative;
+  right: -315px;
+  bottom: 185px;
+}
+
+.officeImg {
+  height: 175px;
+  width: 300px;
+  margin-right: -50px;
+  border: 5px solid white;
+  margin-top: 40px;
+  position: relative;
+  top: 15px;
+  right: -30px;
+}
+
+.aboutImage {
+  background-size: 1200px 360px;
+  background-position: 2% 25%;
+}
+
+.aboutWrapper {
+  grid-template-rows: 20px 75px 300px 300px 400px 60px;
+}
+
+.aboutText {
+  margin: 35px auto;
+  font-size: 35px;
+}
+
+
+}
+
+@media only screen and (min-width: 1200px){
+  .main {
+    background-size: 1474px 1000px;
+    background-position: 50% 58%;
+}
+}
+
+@media only screen and (min-width: 2560px){
+
+  .homeWrapper{
+    grid-template-rows: 25px 125px 590px 350px 500px 500px 70px;
+  }
+  
+
+  .navButton{
+    font-size: 25px;
+  }
+
+  .navButtonAppt{
+    font-size: 25px;
+  }
+
+  .navButtonHolder {
+    float: right;
+    margin-right: 60px;
+    margin-top: 25px;
+}
+
+  .logo {
+    height: 236px;
+    float: left;
+    padding-left: 20px;
+    margin-top: -65px;
+}
+
+  .mainTitle {
+    font-size: 55px;
+    padding-top: 6%;
+}
+
+.main {
+  background-size: 2020px 1400px;
+  background-position: 49% 46%;
+}
+
+.submitButton {
+  padding: 2em 10em;
+}
+
+.aboutParagraph {
+  padding: 0px 300px;
+  font-size: 19px;
+}
+
+.aboutWrapper {
+  grid-template-rows: 20px 120px 450px 300px 600px 60px;
+}
+
+.aboutImage {
+  background-size: 2500px 840px;
+  background-position: 0% 40%;
+}
+
+.aboutText {
+  margin: 100px auto;
+  font-size: 72px;
+}
+
+
+
+}
+
+
 
 
 

@@ -20,7 +20,7 @@ class About extends Component {
                 </div>
                 <div className="aboutBlurb">
                     <h2>SED UT PERSPICIATIS UNDE</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog. </p>
+                    <p className="aboutParagraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.  The quick brown fox jumps over the lazy dog.  The quick brown fox jumps over the lazy dog. </p>
                 </div>
                 <div className="aboutGallery">
                     <AboutGallery/>
