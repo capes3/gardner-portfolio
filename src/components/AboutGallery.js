@@ -15,23 +15,28 @@ class AboutGallery extends Component{
     componentDidMount(){
          axios.get(	' http://res.cloudinary.com/gardnerDental/image/list/gardner.json ')
             .then(res =>{
-                console.log(res.data.resources);
                 this.setState({gallery: res.data.resources})
-            
             })
         
     }
 
     render() {
-            
+
+        var clone = this.state.gallery.slice(0)
+        var cloneIds = clone.map((images, index)=>{ return images.public_id})
+        console.log(cloneIds)
+        
+        
         return (
            <div className="aboutMain">
                <h1 className="aboutGalleryTitle">OurWork</h1>
                <div>
                     <ul>
-                        {this.state.gallery.map((images)=>{
-                            return <Slides images={images.public_id} key={images.version}/>
-                        })}
+                        {
+                            // this.state.gallery.map((images, index)=>{
+                        <Slides images={cloneIds}/>
+                    
+                        }
                     </ul>
                </div>
            </div>
