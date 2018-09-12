@@ -5,6 +5,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Appointment from './components/Appointment'
 import Payments from './components/Payments'
+import Procedures from './components/Procedures'
 
 class Routes extends Component {
 
@@ -18,6 +19,7 @@ class Routes extends Component {
                     <Route component={ About } path="/About"/>
                     <Route component={ Appointment } path="/Appointment"/>
                     <Route component={ Payments } path="/Payments"/>
+                    <Route component={ Procedures } path="/Procedures"/>
 
                 </Switch>    
             </div>    

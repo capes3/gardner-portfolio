@@ -22,7 +22,7 @@ render() {
     return(
         <div>
         <CloudinaryContext cloudName="gardnerDental">
-            <ImageGallery items={newArray}/>
+        
         </CloudinaryContext>
          
         </div>

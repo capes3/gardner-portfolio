@@ -38,6 +38,7 @@ class Navbar extends Component {
                         <Link to= '/About'><button className="navButton">About</button></Link>
                         <a className="navButton" href="https://www.ident.ws/template_include/pi_login.jsp?site=13488&practiceId=28270&page=Patient+Information"> Payments</a>
                         <a className="navButton" href="https://www.ident.ws/template_include/new_patient_sign_in.do?site=13488&practiceId=28270">New Patient Form</a>
+                        <Link to= '/Procedures'><button className="navButton">Procedures</button></Link>
                         <Link to= '/Appointment'><button className="navButtonAppt">Appointments</button></Link>
                         
                     </div>
