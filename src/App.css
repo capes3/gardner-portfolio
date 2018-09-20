@@ -472,6 +472,7 @@ div a {
   z-index: 3;
   position: absolute;
   margin: 140px 100px 0px -160px;
+  cursor: pointer;
 }
 
 .arrowRight{
@@ -479,8 +480,14 @@ div a {
   z-index: 3;
   position: absolute;
   margin: 140px 0px 0px 100px;
+  cursor: pointer;
 }
 
+.proceduresBanner{
+  height:180px;
+  width:100%;
+  background-color:#115680;
+}
 
 
 
@@ -679,7 +686,7 @@ div a {
 @media only screen and (min-width: 768px){
  
   .proceduresWrapper h1 {
-    margin-top: 115px;
+    margin-top: 50px;
     line-height: 30px;
   }
 
@@ -1002,7 +1009,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 
 .proceduresWrapper{
   position: relative;
-  margin-top: 50px;  
+  margin-top: 70px;  
 }
 
 .procedureFooter{

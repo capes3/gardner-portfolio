@@ -49,6 +49,7 @@ render() {
             <Navbar/>
             
             <div className="proceduresWrapper">   
+            <div className="proceduresBanner"></div>
             <h1>Dental Exams & Cleanings</h1>
                 <h2 onClick={this.toggleDentalExam}>Dental Exam</h2>
                 <div>
