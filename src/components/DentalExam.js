@@ -9,7 +9,12 @@ class DentalExamParagraph extends Component{
         <div>
             <Navbar/>
             <div className="proceduresWrapper">
-            <div className="proceduresBanner"></div>
+            <div className="proceduresBanner">
+                <div className="aboutOverlay"></div>
+                <div className="procedureText">Dental Exam</div>
+
+            </div>
+
                 <p>
                 A comprehensive dental exam will be performed by your dentist at your initial dental visit.  At regular check-up exams, your dentist and hygienist will perform the following:
                 Examination of diagnostic X-rays (radiographs): Essential for detection of decay, tumors, cysts, and bone loss.  X-rays also help determine tooth and root positions.

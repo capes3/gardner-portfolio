@@ -1,9 +1,19 @@
 import React, {Component} from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 
 class RootCanalParagraph extends Component{
     render(){
         return(
+            <div>
+            <Navbar/>
+            <div className="proceduresWrapper">
+            <div className="proceduresBanner">
+                <div className="aboutOverlay"></div>
+                <div className="procedureText">Root Canal</div>
+
+            </div>
             <p>Root canal therapy is needed when the nerve of a tooth is affected by decay or infection.  In order to save the tooth, the pulp (the living tissue inside the tooth), nerves, bacteria, and any decay are removed and the resulting space is filled with special, medicated, dental materials, which restore the tooth to its full function.
                     Having a root canal done on a tooth is the treatment of choice to save a tooth that otherwise would die and have to be removed.  Many patients believe that removing a tooth that has problems is the solution, but what is not realized is that extracting (pulling) a tooth will ultimately be more costly and cause significant problems for adjacent teeth.
                     Root canal treatment is highly successful and usually lasts a lifetime, although on occasion, a tooth will have to be retreated due to new infections.
@@ -25,6 +35,11 @@ class RootCanalParagraph extends Component{
                     After treatment, your tooth may still be sensitive, but this will subside as the inflammation diminishes and the tooth has healed.
                     You will be given care instructions after each appointment.  Good oral hygiene practices and regular dental visits will aid in the life of your root canal treatment.
                     </p>
+            </div>
+            <div className="proceduresFooter">
+            <Footer/>
+            </div>
+        </div>
         )
     }
 }

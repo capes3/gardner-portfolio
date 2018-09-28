@@ -1,9 +1,18 @@
 import React, {Component} from 'react'
-
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 class PeriodontalDiseaseParagraph extends Component{
     render(){
         return(
+            <div>
+            <Navbar/>
+            <div className="proceduresWrapper">
+            <div className="proceduresBanner">
+                <div className="aboutOverlay"></div>
+                <div className="procedureText">Periodontal Disease</div>
+
+            </div>
             <p>What is Periodontal (Gum) Disease?
                     The term “periodontal” means “around the tooth.”  Periodontal disease (also known as periodontitis and gum disease) is a common inflammatory condition that affects the supporting and surrounding soft tissues of the tooth, eventually affecting the jawbone itself in the disease’s most advanced stages.
                     Periodontal disease is most often preceded by gingivitis which is a bacterial infection of the gum tissue.  A bacterial infection affects the gums when the toxins contained in plaque begin to irritate and inflame the gum tissues.  Once this bacterial infection colonizes in the gum pockets between the teeth, it becomes much more difficult to remove and treat.  Periodontal disease is a progressive condition that eventually leads to the destruction of the connective tissue and jawbone.  If left untreated, it can cause shifting teeth, loose teeth, and eventually tooth loss. 
@@ -24,6 +33,12 @@ class PeriodontalDiseaseParagraph extends Component{
                     Dental implants – When teeth have been lost due to periodontal disease, the aesthetics and functionality of the mouth can be restored by implanting prosthetic teeth into the jawbone.  Tissue regeneration procedures may be required prior to the placement of a dental implant in order to strengthen the bone.
                     Please contact our office if you have questions or concerns about periodontal disease, periodontal treatment, or dental implants.
                     </p>
+
+                                </div>
+            <div className="proceduresFooter">
+            <Footer/>
+            </div>
+        </div>
         )
     }
 }

@@ -1,9 +1,19 @@
 import React, {Component} from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 
 class FlourideTreatmentParagraph extends Component{
     render(){
         return(
+            <div>
+            <Navbar/>
+            <div className="proceduresWrapper">
+            <div className="proceduresBanner">
+                <div className="aboutOverlay"></div>
+                <div className="procedureText">Flouride Treatment</div>
+
+            </div>
             <p>Fluoride is the most effective agent available to help prevent tooth decay.  It is a mineral that is naturally present in varying amounts in almost all foods and water supplies.  The benefits of fluoride have been well known for over 50 years and are supported by many health and professional organizations.
             Fluoride works in two ways:
             Topical fluoride strengthens the teeth once they have erupted by seeping into the outer surface of the tooth enamel, making the teeth more resistant to decay.  We gain topical fluoride by using fluoride containing dental products such as toothpaste, mouth rinses, and gels.  Dentists and dental hygienists generally recommend that children have a professional application of fluoride twice a year during dental check-ups.
@@ -18,6 +28,11 @@ class FlourideTreatmentParagraph extends Component{
             Recent history of dental decay.
             Remember, fluoride alone will not prevent tooth decay!  It is important to brush at least twice a day, floss regularly, eat balanced meals, reduce sugary snacks, and visit your dentist on a regular basis.
             </p>
+            </div>
+            <div className="proceduresFooter">
+            <Footer/>
+            </div>
+        </div>
         )
     }
 }

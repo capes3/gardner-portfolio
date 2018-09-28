@@ -35,7 +35,6 @@ font-family: 'Nunito Sans', sans-serif;
   grid-template-columns: 1fr; 
 }
 
-
 .aboutWrapper{
   display: grid;
   width: 100%;
@@ -439,6 +438,8 @@ div a {
   padding: 0.5em 0.5em 0px;
 }
 
+
+
 /* .slide{
   width: 100%;
   max-width: 300px;
@@ -484,10 +485,47 @@ div a {
 }
 
 .proceduresBanner{
-  height:180px;
+  height:200px;
   width:100%;
   background-color:#115680;
+  background-image: url(./Office/KJS_7308.jpg);
+  background-size: 300px 300px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -65px;
 }
+
+.proceduresWrapper{
+  position: relative;
+  margin-top: 90px;  
+}
+
+.proceduresFooter{
+  padding: 15px;
+  margin-top: 165px;
+  background-color: #292929;
+}
+
+.proceduresWrapper h2 {
+  cursor: pointer;
+}
+
+.proceduresWrapper p {
+  padding: 0em 1em;
+}
+
+.procedureText{
+  color:white;
+  margin: 0 auto;
+  max-width: 100%; 
+  padding-top: 80px;
+  position: relative;
+  z-index: 1;
+  font-family: 'Great Vibes', cursive;
+  font-size: 25px;
+}
+
+
 
 
 
@@ -538,6 +576,10 @@ div a {
    .aboutImage{
     background-size: 400px 300px;
   }  
+
+  .proceduresBanner{
+    background-size: 420px 300px;
+  }
 
  
 }
@@ -603,7 +645,7 @@ div a {
 
   .navButtonHolder{
     float: right;
-    margin-right: 30px;
+    margin-right: 15px;
     margin-top: 7px;
   }
 
@@ -684,13 +726,19 @@ div a {
 }
 
 @media only screen and (min-width: 768px){
+
+
  
   .proceduresBanner{
     margin-top: 75px;
+    top: -30px;
+    background-size: 775px 320px;
+    background-position: 50% 50%;
+
   }
 
   .proceduresWrapper h1 {
-    margin-top: 50px;
+    margin-top: 15px;
     line-height: 30px;
   }
 
@@ -914,6 +962,14 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   margin: 140px 0px 0px 390px;
 }
 
+.navButtonAppt{
+  margin-right:10px;
+}
+
+.proceduresBanner{
+  background-size: 1020px 300px
+}
+
 
 }
 
@@ -928,7 +984,14 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   margin: 0px 170px;
 }
 
+.proceduresFooter{
+  margin-top:355px;
+}
 
+
+.proceduresBanner{
+  background-size: 1420px 600px
+}
 
 
 }
@@ -950,7 +1013,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 
   .navButtonHolder {
     float: right;
-    margin-right: 60px;
+    margin-right: 70px;
     margin-top: 25px;
 }
 
@@ -1009,26 +1072,9 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 
 
 
+
 }
 
-.proceduresWrapper{
-  position: relative;
-  margin-top: 30px;  
-}
-
-.proceduresFooter{
-  padding: 15px;
-  margin-top: 65px;
-  background-color: #292929;
-}
-
-.proceduresWrapper h2 {
-  cursor: pointer;
-}
-
-.proceduresWrapper p {
-  padding: 0em 1em;
-}
 
 
 

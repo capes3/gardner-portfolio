@@ -11,7 +11,11 @@ render() {
             <Navbar/>
             
             <div className="proceduresWrapper">   
-            <div className="proceduresBanner"></div>
+            <div className="proceduresBanner">
+            <div className="aboutOverlay"></div>
+            <div className="procedureText">Procedures</div>
+
+            </div>
             <h1>Dental Exams & Cleanings</h1>
                 <h2><Link to="/Procedures/DentalExam">Dental Exam</Link></h2>
                 

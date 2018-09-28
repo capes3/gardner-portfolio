@@ -1,9 +1,19 @@
 import React, {Component} from 'react'
+import Navbar from './Navbar'
+import Footer from './Footer'
 
 
 class HomeCareParagraph extends Component{
     render(){
         return(
+            <div>
+            <Navbar/>
+            <div className="proceduresWrapper">
+            <div className="proceduresBanner">
+                <div className="aboutOverlay"></div>
+                <div className="procedureText">Home Care</div>
+
+            </div>
             <p>A beautiful, healthy smile that lasts a lifetime is our ultimate goal when treating patients.  Your personal home care plays an important role in achieving that goal.  Your personal home care starts by eating balanced meals, reducing the number of snacks you eat, and correctly using the various dental aids that help control the plaque and bacteria that cause dental disease.
             Tooth brushing – Brush your teeth at least twice a day (especially before going to bed at night) with an ADA approved soft bristle brush and toothpaste.
             Place the brush at a 45 degree angle to the gums and gently brush using a small, circular motion, ensuring that you always feel the bristles on the gums.
@@ -19,6 +29,11 @@ class HomeCareParagraph extends Component{
             Rinsing – It is important to rinse your mouth with water after brushing and after meals if you are unable to brush.  If you are using an over-the-counter product for rinsing, it’s a good idea to consult with your dentist or dental hygienist on its appropriateness for you.
             Use other dental aids as recommended by your dentist or dental hygienist:  interdental brushes, rubber tip stimulators, tongue cleaners, irrigation devices, fluoride, medicated rinses, etc., can all play a role in good dental home care.
             </p>
+            </div>
+            <div className="proceduresFooter">
+            <Footer/>
+            </div>
+        </div>
         )
     }
 }
