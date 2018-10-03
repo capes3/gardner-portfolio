@@ -506,8 +506,9 @@ div a {
   background-color: #292929;
 }
 
-.proceduresWrapper h2 {
+.proceduresWrapper h2 a {
   cursor: pointer;
+  font-size: 20px;
 }
 
 .proceduresWrapper p {
@@ -522,7 +523,7 @@ div a {
   position: relative;
   z-index: 1;
   font-family: 'Great Vibes', cursive;
-  font-size: 25px;
+  font-size: 35px;
 }
 
 
@@ -795,7 +796,7 @@ div a {
 
   .main{
     background-size: 1025px 850px;
-    background-position: 35% 70%;
+    background-position: 50% 70%;
   }
 
   .mainTitle {
@@ -970,6 +971,10 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   background-size: 1020px 300px
 }
 
+.procedureText{
+  font-size: 45px;
+}
+
 
 }
 
@@ -993,6 +998,18 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   background-size: 1420px 600px
 }
 
+.proceduresWrapper h1{
+  font-size: 50px;
+}
+
+.proceduresWrapper h2{
+  font-size: 40px;
+}
+
+.proceduresWrapper h2 a {
+  cursor: pointer;
+  font-size: 30px;
+}
 
 }
 
