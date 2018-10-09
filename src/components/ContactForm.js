@@ -50,8 +50,12 @@ class ContactForm extends Component {
         this.setState({message: event.target.value})
     }
 
+    validate(){
+        let isError= false
+    }
+
     handleSubmit(event) {
-        console.log(this.state)
+
         // console.log(this.state.startDate._d);
         event.preventDefault();
         
@@ -61,12 +65,16 @@ class ContactForm extends Component {
             // startDate: this.state.startDate._d,
             email: this.state.email,
             message: this.state.message
+        })        .then(function (response){
+            
         })
-        .then(function (response){
-            alert(response)
-        })
+      
+}
+    
+
+      
        
-      }
+      
 
 
 
@@ -97,6 +105,7 @@ class ContactForm extends Component {
 
             </form>
         )
+    
     }
 }
 
