@@ -19,7 +19,7 @@ class Navbar extends Component {
                 <img src={phone} className="phone"/>
                 (435) 257-3880
                 <img src={email} className="email"/>
-                fake_email@email.com
+                gardnerdental@gmail.com
             </div>
             <div className="socialHeader">
             follow us on:

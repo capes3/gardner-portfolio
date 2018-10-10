@@ -17,7 +17,7 @@ class Footer extends Component {
                         <img src={phone} className="phoneFooter"/>
                         (435) 257-3880
                         <img src={email} className="emailFooter"/> 
-                        email@gmail.com
+                        gardnerdental@gmail.com
                     </div>
                         <div className="socialFooter">
                         follow us:

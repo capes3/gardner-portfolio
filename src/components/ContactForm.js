@@ -13,10 +13,14 @@ class ContactForm extends Component {
         super(props);
         this.state= {
             firstName:'',
+            firstNameError:'',
             lastName:'',
-            startDate:moment(),
+            lastNameError:'',
             email:'',
-            message:''
+            emailError:'',
+            message:'',
+            messageError:''
+
 
         }
 
@@ -25,7 +29,7 @@ class ContactForm extends Component {
         this.handleEmailChange = this.handleEmailChange.bind(this)
         // this.handleDateChange = this.handleDateChange.bind(this)
         this.handleMessageChange = this.handleMessageChange.bind(this)
-
+        this.validate = this.validate.bind(this)
         this.handleSubmit =this.handleSubmit.bind(this)
   
     }
@@ -50,14 +54,45 @@ class ContactForm extends Component {
         this.setState({message: event.target.value})
     }
 
-    validate(){
-        let isError= false
+    validate = () => {
+        let isError= false;
+        const errors= {
+            firstNameError:'',
+            lastNameError:'',
+            emailError:'',
+            messageError:''
+        }
+
+        if (this.state.firstName.length < 2 && this.state.firstName.length > 10){
+            isError=true;
+            console.log('there was an error with the firstName')
+        }
+
+        this.setState({
+            ...this.state,
+            ...errors
+        })
+
+        return isError
     }
 
     handleSubmit(event) {
 
         // console.log(this.state.startDate._d);
         event.preventDefault();
+        const err = this.validate();
+        if(!err){
+            //clear the form 
+            this.setState({
+                firstName:'',
+                firstNameError:'',
+                lastName:'',
+                lastNameError:'',
+                email:'',
+                emailError:'',
+                message:'',
+                messageError:''
+            })
         
         axios.post('/contact', {
             firstName: this.state.firstName,
@@ -66,9 +101,9 @@ class ContactForm extends Component {
             email: this.state.email,
             message: this.state.message
         })        .then(function (response){
-            
+            alert("form was submitted")
         })
-      
+    }
 }
     
 
