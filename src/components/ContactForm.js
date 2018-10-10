@@ -62,10 +62,29 @@ class ContactForm extends Component {
             emailError:'',
             messageError:''
         }
+        if ((this.state.firstName.length < 2)||(this.state.firstName.length > 15) ) {
+            isError= true;
+            errors.firstNameError="Invalid First Name"
+            console.log("this didn't send firstName")
+        }
 
-        if (this.state.firstName.length < 2 && this.state.firstName.length > 10){
-            isError=true;
-            console.log('there was an error with the firstName')
+        if ((this.state.lastName.length < 2)||(this.state.lastName.length > 15) ) {
+            isError= true;
+            errors.lastNameError="Invalid First Name"
+            console.log("this didn't send lastName")
+        }
+
+        if(this.state.email.indexOf("@")=== -1){
+            isError= true;
+            errors.emailError="invalid email"
+            console.log("invalid email")
+        }
+
+        if ((this.state.message.length < 5)||(this.state.message.length > 1000 ) ) {
+            isError= true;
+            errors.messageError="Invalid Message"
+            console.log("this didn't send message")
+            alert("this didn't work")
         }
 
         this.setState({
@@ -101,7 +120,6 @@ class ContactForm extends Component {
             email: this.state.email,
             message: this.state.message
         })        .then(function (response){
-            alert("form was submitted")
         })
     }
 }
@@ -119,12 +137,15 @@ class ContactForm extends Component {
                 <h1>Contact Us</h1>
                 <label>
                     <input className="contactField" type="text" placeholder="First" value={this.state.firstName} onChange={this.handleFirstChange}/>
+                    <span className="errorText">{this.state.firstNameError}</span>
                  </label>
                  <label>
                     <input className="contactField" type="text" placeholder="Last" value={this.state.lastName} onChange={this.handleLastChange}/>
+                    <span className="errorText">{this.state.lastNameError}</span>
                  </label>
                  <label>
                      <input className="contactField"type="text" placeholder="Email" value={this.state.email} onChange={this.handleEmailChange}/>
+                     <span className="errorText">{this.state.emailError}</span>
                 </label>
                 {/* <DatePicker 
                 
@@ -134,6 +155,7 @@ class ContactForm extends Component {
                 /> */}
                 <label>
                     <textarea className="messageContactField" type="text" placeholder="Message" value={this.state.message} onChange={this.handleMessageChange}></textarea>
+                    <span className="errorText">{this.state.messageError}</span>
                 </label>
                 <span/>
                 <input className="submitButton" type="submit" value="Submit"/>
