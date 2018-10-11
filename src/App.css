@@ -386,6 +386,10 @@ div a {
 
 }
 
+.textAreaHolder{
+  position:relative;
+}
+
 .contactField{
   width: 75%;
   padding: 12px;
@@ -395,6 +399,47 @@ div a {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+}
+
+.firstNameErrorText{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width:100%;
+  color: red;
+  font-size: xx-small;
+  margin-top: 25px;
+}
+
+.lastNameErrorText{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width:100%;
+  color: red;
+  font-size: xx-small;
+  margin-top: 26px;
+
+}
+
+.messageErrorText{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width:100%;
+  color: red;
+  font-size: xx-small;
+  margin-top: -8px;
+}
+
+.emailErrorText{
+  position:absolute;
+  left: 0;
+  top: 50%;
+  width:100%;
+  color: red;
+  font-size: xx-small;
+  margin-top:25px;
 }
 
 .submitButton{

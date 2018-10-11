@@ -3,6 +3,7 @@ const express = require('express')
     , cors = require('cors')
     , nodemailer = require('nodemailer')
     , xoauth2 = require('xoauth2')
+    , {check, validationResult} = require('express-validator/check')
 
 
 require('dotenv').config()
@@ -12,21 +13,25 @@ app.use(cors())
 app.use(bodyParser.json())
 
 
-app.use('/contact', (req, res)=>{
-    const transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
+app.use('/contact', [
+ check('firstName').isLength({min:2}),
+ check("email").isEmail()
 
-        auth: {
+        ],(req, res)=>{
+            const transporter = nodemailer.createTransport({
+                host: 'smtp.gmail.com',
+
+                    auth: {
             
-                type: 'OAuth2',
-                user: process.env.USER,
-                clientId: process.env.CLIENT_ID,
-                clientSecret: process.env.CLIENT_SECRET,
-                refreshToken: process.env.REFRESH_TOKEN,
-                accessToken: process.env.ACCESS_TOKEN
+                         type: 'OAuth2',
+                         user: process.env.USER,
+                        clientId: process.env.CLIENT_ID,
+                        clientSecret: process.env.CLIENT_SECRET,
+                        refreshToken: process.env.REFRESH_TOKEN,
+                        accessToken: process.env.ACCESS_TOKEN
             
             
-        },
+                    },
        
     })
 
@@ -34,16 +39,18 @@ app.use('/contact', (req, res)=>{
         from: `${req.body.firstName}`+`${req.body.lastName}`,
         to:'capener.cade@gmail.com',
         subject: "Contact request from "+`${req.body.firstName}`+" "+`${req.body.lastName}`,
-        text: "First Name:" + `${req.body.firstName}`+" Last Name:" + `${req.body.lastName}`+ " Message:" +`${req.body.message}`,
+        text: "First Name:" + `${req.body.firstName}`+" Last Name:" + `${req.body.lastName}`+ " Email: " +`${req.body.email}` +" Message:"+`${req.body.message}`,
 
     }
     transporter.sendMail(mailOptions, function(err, res){
         if (err) {
             return console.error('there was an error:', err);    
         } else {
-            console.log('here is the res: ', res)
+            console.log('Message sent: '+ res.response)
         }
     })
+
+    res.sendStatus(200)
 }
     
 )
