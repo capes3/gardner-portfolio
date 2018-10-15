@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
 import axios from 'axios'
+import ContactLoading from './ContactLoading';
 
 
 
@@ -19,7 +20,7 @@ class ContactForm extends Component {
             emailError:'',
             message:'',
             messageError:'',
-            successMessage: false
+            showSuccess: ''
         }
 
         this.handleFirstChange =this.handleFirstChange.bind(this)
@@ -29,6 +30,9 @@ class ContactForm extends Component {
         this.handleMessageChange = this.handleMessageChange.bind(this)
         this.validate = this.validate.bind(this)
         this.handleSubmit =this.handleSubmit.bind(this)
+        this.exitAlert = this.exitAlert.bind(this)
+
+        
   
     }
 
@@ -93,6 +97,7 @@ class ContactForm extends Component {
         // console.log(this.state.startDate._d);
         event.preventDefault();
         const err = this.validate();
+        const _this= this
         if(!err){
             //clear the form 
             this.setState({
@@ -104,10 +109,7 @@ class ContactForm extends Component {
                 emailError:'',
                 message:'',
                 messageError:'',
-                successMessage: true
-                
             })
-        console.log(this.state.successMessage)
         axios.post('/contact', {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
@@ -115,12 +117,31 @@ class ContactForm extends Component {
             email: this.state.email,
             message: this.state.message
         })        .then(function (response){
+            if(response.status=== 200){
+                _this.setState({
+                    showSuccess:'message sent'
+                })
+            }
+            
+        })      .catch(function (response){
+            if(response.status != 200){
+                _this.setState({
+                    showSuccess:'error'
+                })
+            }
         })
     }
 }
-    
 
-      
+exitAlert(event){
+    this.setState({
+        showSuccess:''
+    })
+}
+
+
+
+
        
       
 
@@ -130,6 +151,8 @@ class ContactForm extends Component {
         return(
             <form  className="homeContact" onSubmit={this.handleSubmit}>
                 <h1>Contact Us</h1>
+                <ContactLoading loader={this.state.showSuccess} exit={this.exitAlert}/>
+
                 <label className="textAreaHolder">
                     <input className="contactField" type="text" placeholder="First" value={this.state.firstName} onChange={this.handleFirstChange}/>
                     <span className="firstNameErrorText">{this.state.firstNameError}</span>
@@ -155,7 +178,6 @@ class ContactForm extends Component {
                 </label>
                 <span/>
                 <input className="submitButton" type="submit" value="Submit"/>
-
             </form>
         )
     

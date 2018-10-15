@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from './Navbar';
 import { Parallax } from 'react-parallax'
+import ScrollableAnchor from 'react-scrollable-anchor'
 import KJS_7288 from '../Office/KJS_7288.jpg'
 import KJS_7308 from '../Office/KJS_7308.jpg'
 import KJS_7304 from '../Office/KJS_7304.jpg'
@@ -25,12 +26,12 @@ class Home extends Component {
                     <div className="colorOverlay"></div>
                     <h1 className="mainTitle">Smile with Confidence</h1>
                     <p className="mainParagraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-                    <button className="navButtonApptMain">Contact Us</button>
+                    <a className="navButtonApptMain" href='#Appointment'>Contact Us</a>
 
                 </div>
                 <div className="about">
                     <h2 className="mainHeader">SED UT PERSPICIATIS UNDE</h2>
-                    <p className="aboutParagraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam laoreet eros bibendum ante vestibulum rutrum. Suspendisse potenti. Proin sed bibendum est. Nulla bibendum enim eu scelerisque vulputate. Quisque sit amet ante sed ex pulvinar sagittis sit amet sed erat. Maecenas consectetur ex eget faucibus gravida. Donec vel facilisis orci.</p>
+                    <p className="aboutParagraph">Dr. Rod T. Gardner and his team warmly welcome you to our dental practice located in Tremonton! We provide comprehensive, high-quality dental care designed to meet your needs in a relaxed atmosphere. From the moment you walk through the door, we hope you will feel at ease and cared for as a part of our family. We know you have plenty of options when it comes to dental care and appreciate you choosing us. It is truly an honor to continue serving the existing patients while welcoming new patients every day.</p>
                 </div>
                 <div className="gallery">
                     <div className="imageHolder">
@@ -42,6 +43,17 @@ class Home extends Component {
                 </div>
                 <div className="contact">
                 <ContactForm/>
+                <div className="homeContactMap"></div>
+                </div>
+                <div className="hours">
+                <div className="hoursOverlay"> 
+                    <div className="hoursText">
+                        <h1>Hours</h1>
+                        <h2>Mon-Thurs</h2>
+                        <h2>8:30-5:00</h2>
+                        <h2>Lunch from 12:30-1:30</h2>
+                    </div>
+                    </div>
                 </div>
                 <div className="foot">
                 <Footer/>

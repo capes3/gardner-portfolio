@@ -16,9 +16,10 @@ font-family: 'Nunito Sans', sans-serif;
                         "about"
                         "gallery"
                         "contact"
+                        "hours"
                         "footer";
 
-  grid-template-rows: 20px 100px 500px 400px 600px 450px 60px;
+  grid-template-rows: 20px 100px 500px 600px 600px 450px 300px 60px;
   grid-template-columns: 1fr; 
 }
 
@@ -49,6 +50,36 @@ font-family: 'Nunito Sans', sans-serif;
   grid-template-columns: 1fr; 
 }
 
+.hours{
+  grid-area: hours;
+  background-color: #115680;
+  background-image: url(./Office/KJS_7294.jpg);
+  background-size: 100% 200%;
+  background-position:  center;
+  position:relative;
+  overflow: hidden;
+
+}
+
+.hoursText{
+  color:white;
+  padding: 2% 0 10%;
+  text-align: center;
+  text-shadow:
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  2px 2px 0 #000;
+  font-size: 110%;
+}
+
+.hoursOverlay{
+  background-color:#115680;
+  opacity: 0.9;
+  width:100%;
+  height:100%;
+  position: absolute;
+}
 
 
 .aboutImage{
@@ -62,7 +93,7 @@ font-family: 'Nunito Sans', sans-serif;
 }
 
 .aboutOverlay{
-  background-color:#115680;
+  background-color:#0a324b;
   opacity: 0.8;
   width:100%;
   height:100%;
@@ -184,6 +215,11 @@ font-family: 'Nunito Sans', sans-serif;
 
 }
 
+.apptContact{
+  grid-area: contact;
+  background-color: white;
+}
+
 .foot{
   grid-area: footer;
   background-color: #292929;
@@ -220,7 +256,118 @@ font-family: 'Nunito Sans', sans-serif;
 
 }
 
+.successMessage{
+  position: absolute;
+  width:50px;
+  height:50px;
+}
 
+
+
+
+.container {
+  width: 200px;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  padding-left:55px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #115680;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  margin-left: 50px;
+  font-size: 40pt;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #115680;
+  position: relative;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  animation: fadeIn 1.5s linear;
+}
+
+.checkmark::after {
+  content: '';
+  border-right: 2px solid #115680;
+  border-top: 2px solid #115680;
+  height: 100px;
+  width: 30px;
+  transform: scaleX(-1) rotate(135deg);
+  animation: checkmark 2s ease;
+  position: absolute;
+  top: 115px;
+  left: 55px;
+  margin-top: -3px;
+  transform-origin: left top;
+}
+
+
+@keyframes fadeIn {
+  0% { opacity: 0 };
+  100% { opacity: 1 };
+};
+
+@keyframes checkmark {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  };
+    
+  50% {
+    height: 0;
+    width: 0;
+    opacity: 1;
+  };
+  
+  60% {
+    height: 0;
+    width: 30px;
+    opacity: 1;
+  }
+  
+  70% {
+    height: 50px;
+    width: 30px;
+    opacity: 1;
+  }
+  
+  80% {
+    height: 100px;
+    width: 30px;
+    opacity: 1;
+  }
+  
+  100% {
+    height: 100px;
+    width: 30px;
+    opacity: 1;
+  }
+}
+
+.errorAlert{
+  display: block;
+  position: absolute;
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+  z-index: 1;
+  width:70%;
+  margin-left:15%;
+  margin-right:15%;
+  border-radius:10px;
+}
 
 .phone{
  height:12px;
@@ -383,7 +530,10 @@ div a {
 .homeContact{
   margin:auto;
   padding-top:20px;
+}
 
+.homeContactMap{
+  display:none;
 }
 
 .textAreaHolder{
@@ -549,6 +699,8 @@ div a {
   padding: 15px;
   margin-top: 165px;
   background-color: #292929;
+  margin-bottom:0;
+  overflow: hidden;
 }
 
 .proceduresWrapper h2 a {
@@ -557,7 +709,9 @@ div a {
 }
 
 .proceduresWrapper p {
-  padding: 0em 1em;
+  padding: 0 5%;
+  font-size: 120%;
+  margin-bottom: 40%;
 }
 
 .procedureText{
@@ -593,9 +747,10 @@ div a {
                           "about"
                           "gallery"
                           "contact"
+                          "hours"
                           "footer";
   
-    grid-template-rows: 20px 100px 500px 300px 600px 450px 60px;
+    grid-template-rows: 20px 100px 500px 500px 600px 450px 300px 60px;
     grid-template-columns: 1fr; 
   }
 
@@ -638,7 +793,7 @@ div a {
   }
 
   .homeWrapper{
-    grid-template-rows: 20px 90px 500px 400px 600px 450px 60px;
+    grid-template-rows: 20px 90px 500px 450px 600px 450px 300px 60px;
   }
 
   .mainTitle{
@@ -703,10 +858,6 @@ div a {
     }
 
 
-  .homeWrapper{
-    grid-template-rows: 20px 65px 500px 300px 350px 500px 70px;
-  }
-
 
 
   .mainTitle{
@@ -765,13 +916,17 @@ div a {
   padding: 0px 75px;
 }
 
-
-
-
-
+.outer{
+  margin-left:47%;
+  margin-right:50%;
+  margin-top:-270px;
 }
 
-@media only screen and (min-width: 768px){
+
+
+
+
+
 
 
  
@@ -789,7 +944,7 @@ div a {
   }
 
   .homeWrapper{
-    grid-template-rows: 25px 70px 500px 300px 350px 500px 70px;
+    grid-template-rows: 25px 70px 500px 450px 350px 500px 300px 70px;
   }
 
   .header{
@@ -867,7 +1022,7 @@ div a {
 
   .aboutParagraph {
     padding: 0px 70px;
-    font-size: 19px;
+    font-size: 22px;
 }
 
 .contactMap{
@@ -958,7 +1113,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 }
 
 .homeWrapper{
-  grid-template-rows: 25px 70px 500px 300px 450px 500px 70px;
+  grid-template-rows: 25px 70px 500px 400px 450px 500px 300px 70px;
 }
 
 .signImg {
@@ -1020,6 +1175,34 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   font-size: 45px;
 }
 
+.outer{
+  margin-left:48%;
+  margin-right:50%;
+  margin-top:-270px;
+}
+
+
+
+.apptContact{
+  margin-left:20%;
+  margin-right:20%
+}
+
+.homeContact{
+  margin-right:50%;
+}
+
+.homeContactMap{
+  display:block;
+  position: relative;
+  width:45%;
+  height:400px;
+  background-color:#115680;
+  margin:-400px 0px 0px 520px;
+  background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+E+Main+St,+Tremonton,+UT+84337&zoom=12&scale=1&size=450x465&maptype=roadmap&key=AIzaSyA-LGAyE_rwI4N7p5x0DdL6XN5I6Ox-hv4&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x115680%7Clabel:1%7C814+E+Main+St,+Tremonton,+UT+84337);
+}
+
+
 
 }
 
@@ -1031,7 +1214,16 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 
 
 .homeContact{
-  margin: 0px 170px;
+  margin-right: 50% ;
+}
+
+.homeContactMap{
+  margin:-400px 0px 0px 750px;
+}
+
+.aboutParagraph {
+  padding: 0px 70px;
+  font-size: 26px;
 }
 
 .proceduresFooter{
@@ -1061,9 +1253,17 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 @media only screen and (min-width: 2560px){
 
   .homeWrapper{
-    grid-template-rows: 25px 125px 590px 350px 500px 500px 70px;
+    grid-template-rows: 25px 125px 590px 350px 500px 500px 500px 70px;
   }
+
+
   
+  .homeContactMap{
+    margin:-425px 0px 0px 1300px;
+    background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+E+Main+St,+Tremonton,+UT+84337&zoom=16&scale=1&size=600x400&maptype=roadmap&key=AIzaSyA-LGAyE_rwI4N7p5x0DdL6XN5I6Ox-hv4&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x115680%7Clabel:1%7C814+E+Main+St,+Tremonton,+UT+84337);
+  }
+
+
 
   .navButton{
     font-size: 25px;
@@ -1092,8 +1292,8 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 }
 
 .main {
-  background-size: 2020px 1400px;
-  background-position: 49% 46%;
+  background-size: 2520px 1500px;
+  background-position: 49% 48%;
 }
 
 .submitButton {
@@ -1102,7 +1302,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 
 .aboutParagraph {
   padding: 0px 300px;
-  font-size: 19px;
+  font-size: 30px;
 }
 
 .aboutWrapper {
@@ -1130,6 +1330,48 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 
 .arrowRight{
   margin: 140px 0px 0px 690px;
+}
+
+.proceduresWrapper p {
+  font-size:300%;
+}
+
+.proceduresBanner {
+  height:600px;
+  background-size:100% 105%;
+
+}
+
+.procedureText{
+  padding-top:10%;
+}
+
+.proceduresFooter{
+  height: 140px;
+}
+
+.infoBar{
+  margin-top: 40px;
+  padding:24px;
+  padding-bottom:34px;
+}
+
+.contactFooter{
+  font-size: 120%;
+}
+
+.socialFooter{
+  font-size:120%;
+}
+
+.contactFooter img{
+  height:30px;
+  width:30px;
+}
+
+.socialFooter img{
+  height:30px;
+  width:30px;
 }
 
 

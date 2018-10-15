@@ -18,7 +18,7 @@ class Appointment extends Component {
                 <div className="contactMap">
                     <a className="mapLink" href="https://www.google.com/maps/dir//814+E+Main+St,+Tremonton,+UT+84337/">map link</a>
                 </div>
-                <div className="contact">
+                <div className="apptContact">
                 <ContactForm/>
                 </div>
                 <div className="foot">
