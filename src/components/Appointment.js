@@ -20,7 +20,11 @@ class Appointment extends Component {
                 </div>
                 <div className="apptContact">
                 <ContactForm/>
+                <div className="apptImage">
+
                 </div>
+                </div>
+
                 <div className="foot">
                 <Footer/>
                 </div>

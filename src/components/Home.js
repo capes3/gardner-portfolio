@@ -25,13 +25,21 @@ class Home extends Component {
                 <div className="main">
                     <div className="colorOverlay"></div>
                     <h1 className="mainTitle">Smile with Confidence</h1>
-                    <p className="mainParagraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+                    <p className="mainParagraph">Contact Us for An Appointment</p>
                     <a className="navButtonApptMain" href='#Appointment'>Contact Us</a>
 
                 </div>
                 <div className="about">
-                    <h2 className="mainHeader">SED UT PERSPICIATIS UNDE</h2>
-                    <p className="aboutParagraph">Dr. Rod T. Gardner and his team warmly welcome you to our dental practice located in Tremonton! We provide comprehensive, high-quality dental care designed to meet your needs in a relaxed atmosphere. From the moment you walk through the door, we hope you will feel at ease and cared for as a part of our family. We know you have plenty of options when it comes to dental care and appreciate you choosing us. It is truly an honor to continue serving the existing patients while welcoming new patients every day.</p>
+                    <h2 className="mainHeader">Come See Us Today</h2>
+                        <p className="aboutParagraph">At Gardner Dental, we are committed to providing you and your family with high-quality service at an
+                                                affordable price. Our friendly dentists offers a wide range of services to help patients of all ages enjoy
+                                                excellent oral health, and we go the extra mile to ensure that you feel at ease in our office. Our goal is
+                                                treat you with the honesty, courtesy, and respect that you deserve while providing you with
+                                                comprehensive services to meet all your oral health needs. Our practice also features the latest
+                                                technologies and diagnostic tools to ensure precise, comfortable, and effective care. We invite you to
+                                                call or visit us today to schedule an appointment with Dr. Rod Gardner or Dr. Tyson Gardner. We look
+                                                forward to helping you care for your smile!
+                            </p>
                 </div>
                 <div className="gallery">
                     <div className="imageHolder">
@@ -43,7 +51,9 @@ class Home extends Component {
                 </div>
                 <div className="contact">
                 <ContactForm/>
-                <div className="homeContactMap"></div>
+                <div className="homeContactMap">
+                    <a className="mapLink" href="https://www.google.com/maps/dir//814+E+Main+St,+Tremonton,+UT+84337/">map link</a>
+                </div>
                 </div>
                 <div className="hours">
                 <div className="hoursOverlay"> 

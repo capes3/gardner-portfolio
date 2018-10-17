@@ -21,7 +21,10 @@ class Footer extends Component {
                     </div>
                         <div className="socialFooter">
                         follow us:
+                        <a href="https://www.facebook.com/gardner.dental" >
+
                         <img src={facebook} className="facebookFooter"/>
+                        </a>
                         </div>
                 </div>
                 
