@@ -1,9 +1,7 @@
 import React, {Component} from 'react'
-import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
 import ContactForm from './ContactForm';
 import Footer from './Footer';
-import  MapView  from './MapView';
 
 
 

@@ -1,7 +1,6 @@
-import React,{ Component } from 'react'
+import React from 'react'
 
 function ContactLoading(props){
-    console.log(props)
     
     if(props.loader ===''){
         return null

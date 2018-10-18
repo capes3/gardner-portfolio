@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CloudinaryContext, Transformation, Image } from '../../node_modules/cloudinary-react';
 
 
 const Slider = ({image, width, height}) => {

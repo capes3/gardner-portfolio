@@ -1,6 +1,4 @@
 import React, {Component} from 'react'
-import DatePicker from 'react-datepicker'
-import moment from 'moment'
 import axios from 'axios'
 import ContactLoading from './ContactLoading';
 
@@ -110,10 +108,9 @@ class ContactForm extends Component {
                 message:'',
                 messageError:'',
             })
-        axios.post('/contact', {
+        axios.post('/contact',{
             firstName: this.state.firstName,
             lastName: this.state.lastName,
-            // startDate: this.state.startDate._d,
             email: this.state.email,
             message: this.state.message
         })        .then(function (response){
@@ -124,7 +121,7 @@ class ContactForm extends Component {
             }
             
         })      .catch(function (response){
-            if(response.status != 200){
+            if(response.status !== 200){
                 _this.setState({
                     showSuccess:'error'
                 })

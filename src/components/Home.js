@@ -1,9 +1,6 @@
 import React, {Component} from 'react'
-import { Link } from 'react-router-dom'
 import Navbar from './Navbar';
-import { Parallax } from 'react-parallax'
-import ScrollableAnchor from 'react-scrollable-anchor'
-import KJS_7288 from '../Office/KJS_7288.jpg'
+import StaffGallery from './StaffGallery'
 import KJS_7308 from '../Office/KJS_7308.jpg'
 import KJS_7304 from '../Office/KJS_7304.jpg'
 import KJS_7307 from '../Office/KJS_7307.jpg'
@@ -25,7 +22,7 @@ class Home extends Component {
                 <div className="main">
                     <div className="colorOverlay"></div>
                     <h1 className="mainTitle">Smile with Confidence</h1>
-                    <p className="mainParagraph">Contact Us for An Appointment</p>
+                    <p className="mainParagraph">Hours: Mon-Thurs 8:30-5:00 <br/>Lunch from 12:30-1:30</p>
                     <a className="navButtonApptMain" href='#Appointment'>Contact Us</a>
 
                 </div>
@@ -43,10 +40,10 @@ class Home extends Component {
                 </div>
                 <div className="gallery">
                     <div className="imageHolder">
-                        <img className="signImg" src={KJS_7293}/>
-                        <img className="officeImg" src={KJS_7308}/>
-                        <img className="rightChair" src={KJS_7307}/>
-                        <img className="leftChair" src={KJS_7304}/>
+                        <img alt={'sign'}className="signImg" src={KJS_7293}/>
+                        <img alt={'office'} className="officeImg" src={KJS_7308}/>
+                        <img alt={'chair'} className="rightChair" src={KJS_7307}/>
+                        <img alt={'chair'} className="leftChair" src={KJS_7304}/>
                     </div>
                 </div>
                 <div className="contact">
@@ -55,14 +52,10 @@ class Home extends Component {
                     <a className="mapLink" href="https://www.google.com/maps/dir//814+E+Main+St,+Tremonton,+UT+84337/">map link</a>
                 </div>
                 </div>
-                <div className="hours">
+                <div className="staffGallery">
                 <div className="hoursOverlay"> 
-                    <div className="hoursText">
-                        <h1>Hours</h1>
-                        <h2>Mon-Thurs</h2>
-                        <h2>8:30-5:00</h2>
-                        <h2>Lunch from 12:30-1:30</h2>
-                    </div>
+                    <h2 className="galleryHeader">Our Staff</h2>
+                    <StaffGallery/>
                     </div>
                 </div>
                 <div className="foot">

@@ -7,29 +7,36 @@ import logo from '../Office/GardnerLogo.png'
 
 
 
+
 class Navbar extends Component {
 
     render(){
+
+
         return(
             <div className="navWrapper">
             
             
             <div className="header">
             <div className="contactHeader">
-                <img src={phone} className="phone"/>
+                <img alt={'phone icon'}src={phone} className="phone"/>
                 (435) 257-3880
-                <img src={email} className="email"/>
+                <img alt={'email-icon'}src={email} className="email"/>
                 gardnerdental@gmail.com
             </div>
+                
             <div className="socialHeader">
             follow us on:
             <a href="https://www.facebook.com/gardner.dental" >
-            <img src={facebook} className="facebook"/>
+            <img alt={'facebook icon'}src={facebook} className="facebook"/>
             </a>
             </div>
+
+
             </div>
+            
             <div className="logoWrapper">
-                <img src={logo} className="logo"/>
+                <img alt={'logo'}src={logo} className="logo"/>
             </div>
 
                 <div className="navButtonHolder">
@@ -38,7 +45,7 @@ class Navbar extends Component {
                         <Link to= '/About'><button className="navButton">About</button></Link>
                         <a className="navButton" href="https://www.ident.ws/template_include/pi_login.jsp?site=13488&practiceId=28270&page=Patient+Information"> Patient Login </a>
                         <a className="navButton" href="https://www.ident.ws/template_include/new_patient_sign_in.do?site=13488&practiceId=28270">New Patient Form</a>
-                        <Link to= '/Procedures'><button className="navButton">Procedures</button></Link>
+                        <Link to= '/Procedures'><button className="navButton">Procedures</button></Link> 
                         <Link to= '/Appointment'><button className="navButtonAppt">Appointments</button></Link>
                         
                     </div>
