@@ -108,19 +108,18 @@ class ContactForm extends Component {
                 message:'',
                 messageError:'',
             })
-        axios.post('/contact',{
+            axios.post('/contact',{
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             email: this.state.email,
             message: this.state.message
-        })        .then(function (response){
+        }).then(function (response){
             if(response.status=== 200){
                 _this.setState({
                     showSuccess:'message sent'
                 })
             }
-            
-        })      .catch(function (response){
+        }).catch(function (response){
             if(response.status !== 200){
                 _this.setState({
                     showSuccess:'error'

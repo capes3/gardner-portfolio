@@ -17,7 +17,9 @@ class About extends Component {
                 </div>
                 <div className="aboutImage">
                         <div className="aboutOverlay"></div>
-                    <div className="aboutText">About Us</div>
+                    <h1 className="aboutText">About Us
+                    <p className="hoursText">Hours: Mon-Thurs 8:30-5 Lunch from 12:30-1:30</p>
+                    </h1>
                 </div>
                 <div className="aboutBlurb">
                     <p className="aboutBlurbParagraph">Every member of our team is committed to treating you with care. We want you to be comfortable, so we've created an environment that is friendly and welcoming from the moment you enter our reception area until you leave our office with a healthier smile. </p>
@@ -29,11 +31,7 @@ class About extends Component {
                     <AboutGallery/>
                 
                 </div>
-                <div className="hours">
-                    <div className="hoursText">
-                    Hours: Mon-Thurs 8:30-5 Lunch from 12:30-1:30
-                    </div>
-                </div>
+
                 <div className="foot">
                 <Footer/>
                 </div>

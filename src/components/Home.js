@@ -11,7 +11,15 @@ import ContactForm from './ContactForm'
 import Footer from './Footer'
 
 
+var bgUrl = `https://maps.googleapis.com/maps/api/staticmap?center=814+E+Main+St,+Tremonton,+UT+84337&zoom=15&scale=1&size=450x465&maptype=roadmap&key=${process.env.REACT_APP_MAP_KEY}&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x115680%7Clabel:1%7C814+E+Main+St,+Tremonton,+UT+84337`
+
+var mapStyle ={
+    backgroundImage: `url(${bgUrl})`
+}
+
 class Home extends Component {
+
+
 
     render(){
         return(
@@ -29,7 +37,7 @@ class Home extends Component {
                 <div className="about">
                     <h2 className="mainHeader">Come See Us Today</h2>
                         <p className="aboutParagraph">At Gardner Dental, we are committed to providing you and your family with high-quality service at an
-                                                affordable price. Our friendly dentists offers a wide range of services to help patients of all ages enjoy
+                                                affordable price. Our friendly dentists offer a wide range of services to help patients of all ages enjoy
                                                 excellent oral health, and we go the extra mile to ensure that you feel at ease in our office. Our goal is
                                                 treat you with the honesty, courtesy, and respect that you deserve while providing you with
                                                 comprehensive services to meet all your oral health needs. Our practice also features the latest
@@ -48,7 +56,7 @@ class Home extends Component {
                 </div>
                 <div className="contact">
                 <ContactForm/>
-                <div className="homeContactMap">
+                <div className="homeContactMap" style={ mapStyle }>
                     <a className="mapLink" href="https://www.google.com/maps/dir//814+E+Main+St,+Tremonton,+UT+84337/">map link</a>
                 </div>
                 </div>

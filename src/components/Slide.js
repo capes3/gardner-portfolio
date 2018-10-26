@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 
 const Slider = ({image, width, height}) => {
-    const backgroundImage = `http://res.cloudinary.com/gardnerDental/image/upload/c_scale,h_300/${image}.jpg`;
+    const backgroundImage = `https://res.cloudinary.com/gardnerDental/image/upload/c_scale,h_300/${image}.jpg`;
     const styles = {
       backgroundImage: `url(${backgroundImage})`,
       backgroundPosition: 'center top',

@@ -13,7 +13,7 @@ app.use(cors())
 app.use(bodyParser.json())
 
 
-app.use('/contact', [
+app.use('/contact',[
  check('firstName').isLength({min:2}),
  check("email").isEmail()
 

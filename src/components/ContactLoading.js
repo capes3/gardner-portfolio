@@ -4,7 +4,6 @@ function ContactLoading(props){
     
     if(props.loader ===''){
         return null
-        console.log(props.loader)
     }else if(props.loader ==='message sent'){
     
         return(

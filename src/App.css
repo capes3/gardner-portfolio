@@ -1,6 +1,5 @@
 *{
-  font-family: 'Merriweather Sans', sans-serif;
-font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Source Serif Pro','Merriweather Sans', 'Nunito Sans', serif, sans-serif;
 }
 
 .App {
@@ -42,12 +41,11 @@ font-family: 'Nunito Sans', sans-serif;
   grid-template-areas:  "head"
                         "nav"
                         "aboutImage"
-                        "hours"
                         "aboutBlurb"
                         "aboutGallery"
                         "footer";
 
-  grid-template-rows: 20px 90px 200px 65px 450px 360px 60px ;
+  grid-template-rows: 20px 90px 200px 450px 360px 60px ;
   grid-template-columns: 1fr; 
 }
 
@@ -79,17 +77,16 @@ font-family: 'Nunito Sans', sans-serif;
   1px -1px 0 #000,
   -1px 1px 0 #000,
   1px 1px 0 #000;
-  font-size: 100%;
+  font-size: 50%;
 }
 
 .hoursOverlay{
-  background-color:#115680;
+  background-color:#0a324b;
   opacity: 0.9;
   width:100%;
   height:100%;
   position: absolute;
 }
-
 
 .aboutImage{
   grid-area: aboutImage; 
@@ -108,6 +105,8 @@ font-family: 'Nunito Sans', sans-serif;
   height:100%;
   position: absolute;
 }
+
+
 
 .aboutBlurb{
   grid-area: aboutBlurb;
@@ -166,8 +165,8 @@ font-family: 'Nunito Sans', sans-serif;
 }
 
 .colorOverlay{
-  background-color:#115680;
-  opacity: 0.5;
+  background-color:#0a324b;
+  opacity: 0.8;
   width:100%;
   height:100%;
   position: absolute;
@@ -554,7 +553,7 @@ div a {
   display:flex;
   float:left;
   margin-top:-6px;
-  font-size:9px;
+  font-size:8px;
   align-items: center;
 }
 
@@ -573,7 +572,7 @@ div a {
   display:flex;
   float:right;
   margin-top:-11px;
-  font-size:9px;
+  font-size:8px;
   align-items: center;
 }
 .facebookFooter{
@@ -745,7 +744,7 @@ div a {
 }
 
 .proceduresBanner{
-  height:200px;
+  height:40vh;
   width:100%;
   background-color:#115680;
   background-image: url(./Office/KJS_7308.jpg);
@@ -753,6 +752,17 @@ div a {
   position: relative;
   overflow: hidden;
   margin-top: -65px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.proceduresBanner div{
+  height:100%;
+  width:100%;
+  background-color:#0a324b;
+  position: absolute;
+  opacity:0.8;
 }
 
 .proceduresWrapper{
@@ -773,21 +783,64 @@ div a {
   font-size: 20px;
 }
 
+.proceduresWrapper h1{
+  line-height: 15vh;
+}
+
 .proceduresWrapper p {
   padding: 0 5%;
   font-size: 120%;
-  margin-bottom: 40%;
+  margin-bottom: 5%;
+  transition: 2s;
 }
 
-.procedureText{
+.proceduresBanner h1{
   color:white;
   margin: 0 auto;
   max-width: 100%; 
-  padding-top: 80px;
   position: relative;
   z-index: 1;
   font-family: 'Great Vibes', cursive;
   font-size: 35px;
+  line-height: 15vh;
+}
+
+.cleaningsWrapper h2{
+  cursor: pointer;
+}
+
+.cleaningsWrapper h1{
+  color:white;
+  background-color:#fe961b;
+
+}
+
+.restorationsWrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.restorationsWrapper h1{
+  color:white;
+  background-color: #fe961b;
+}
+
+.restorationsWrapper h2{
+  cursor: pointer;
+}
+
+.cosmeticWrapper{
+  display: flex;
+  flex-direction: column;
+}
+
+.cosmeticWrapper h1{
+  color:white;
+  background-color: #fe961b;
+}
+
+.cosmeticWrapper h2{
+  cursor: pointer;
 }
 
 
@@ -802,6 +855,14 @@ div a {
   .logoWrapper {
 
     padding: 0px 0px 0px 0px;
+}
+
+.socailFooter{
+  font-size:9px;
+}
+
+.contactFooter{
+  font-size: 9px;
 }
 }
 
@@ -854,7 +915,7 @@ div a {
   }
 
   .aboutWrapper {
-    grid-template-rows: 20px 95px 200px 60px 400px 370px 60px;
+    grid-template-rows: 20px 95px 200px 400px 370px 60px;
 }
  
 }
@@ -911,7 +972,7 @@ div a {
   }
 
   .aboutWrapper {
-    grid-template-rows: 20px 95px 250px 40px 360px 370px 60px;
+    grid-template-rows: 20px 95px 250px 360px 370px 60px;
 }
 
 .aboutBlurbParagraph{
@@ -988,7 +1049,7 @@ div a {
   }
 
   .aboutWrapper {
-    grid-template-rows: 20px 75px 250px 50px 425px 400px 60px;
+    grid-template-rows: 20px 75px 250px 425px 400px 60px;
 }
 .aboutText {
   margin: 10px auto;
@@ -1018,9 +1079,8 @@ div a {
 
   }
 
-  .proceduresWrapper h1 {
+  .proceduresBanner h1 {
     margin-top: 15px;
-    line-height: 30px;
   }
 
   .homeWrapper{
@@ -1237,7 +1297,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 }
 
 .aboutWrapper {
-  grid-template-rows: 20px 75px 300px 60px 400px 450px 60px;
+  grid-template-rows: 20px 75px 300px 400px 450px 60px;
 }
 
 .aboutText {
@@ -1266,7 +1326,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   background-size: 1020px 300px
 }
 
-.procedureText{
+.proceduresBanner h1{
   font-size: 45px;
 }
 
@@ -1279,8 +1339,8 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 
 
 .apptContact{
-  margin-left:20%;
-  margin-right:20%
+  margin-left:12%;
+  margin-right:20%;
 }
 
 .homeContact{
@@ -1290,10 +1350,10 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 .homeContactMap{
   display:block;
   position: relative;
-  width:45%;
+  width:35%;
   height:400px;
   background-color:#115680;
-  margin:-400px 0px 0px 50%;
+  margin:-400px 0px 0px 56%;
   background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+E+Main+St,+Tremonton,+UT+84337&zoom=12&scale=1&size=450x465&maptype=roadmap&key=AIzaSyA-LGAyE_rwI4N7p5x0DdL6XN5I6Ox-hv4&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x115680%7Clabel:1%7C814+E+Main+St,+Tremonton,+UT+84337);
 }
 
@@ -1305,7 +1365,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   display:block;
   height:55%;
   width:55%;
-  margin: -55% 0% 0% 65%;
+  margin: -50% 0% 0% 65%;
 }
 
 .mainTitle{
@@ -1337,7 +1397,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 }
 
 .homeContactMap{
-  margin:-400px 0px 0px 52%;
+  margin:-400px 0px 0px 55%;
   background-size: 100% 115%;
   background-position: 50% 50%;
 }
@@ -1360,7 +1420,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   font-size:200%;
 }
 
-.proceduresWrapper h1{
+.proceduresBanner h1{
   font-size: 50px;
 }
 
@@ -1381,7 +1441,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   display:block;
   height:55%;
   width:55%;
-  margin: -40% 0% 0% 65%;
+  margin: -35% 0% 0% 65%;
 }
 
 .mainTitle{
@@ -1429,9 +1489,9 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   }
 
   .homeContactMap{
-    background-size:100% 180%;
+    background-size:100% 196%;
     height: 60%;
-    background-position: 0 -170px;
+    background-position: 0 -200px;
   }
 
 
@@ -1442,7 +1502,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   }
   
   .homeContactMap{
-    margin:-725px 0px 0px 1300px;
+    margin:-715px 0px 0px 1450px;
     background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+E+Main+St,+Tremonton,+UT+84337&zoom=16&scale=1&size=600x400&maptype=roadmap&key=AIzaSyA-LGAyE_rwI4N7p5x0DdL6XN5I6Ox-hv4&format=png&visual_refresh=true&markers=size:small%7Ccolor:0x115680%7Clabel:1%7C814+E+Main+St,+Tremonton,+UT+84337);
   }
 
@@ -1542,7 +1602,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 }
 
 .aboutWrapper {
-  grid-template-rows: 45px 125px 450px 100px 750px 500px 120px;
+  grid-template-rows: 45px 125px 450px 750px 500px 120px;
 }
 
 .aboutProceduresButton{
@@ -1587,7 +1647,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 
 }
 
-.procedureText{
+.proceduresBanner h1{
   padding-top:10%;
   font-size:80px;
 }

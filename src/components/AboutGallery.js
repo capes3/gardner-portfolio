@@ -18,7 +18,7 @@ class AboutGallery extends Component{
     }
 
     componentDidMount(){
-         axios.get(	' http://res.cloudinary.com/gardnerDental/image/list/procedures.json ')
+         axios.get(	' https://res.cloudinary.com/gardnerDental/image/list/procedures.json ')
             .then(res =>{
                 var public_ids = res.data.resources.map((images, index)=>{ return images.public_id })
                 this.setState({gallery:public_ids})
