@@ -1047,7 +1047,7 @@ div a {
   .navButtonHolderWide{
     display: flex;
     position: absolute;
-    margin-top:17px;
+    margin-top:18px;
     right: 5%;
     align-items: center;
     justify-content: center;
