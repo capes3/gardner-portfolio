@@ -18,7 +18,7 @@
                         "staffGallery"
                         "footer";
 
-  grid-template-rows: 20px 100px 500px 600px 600px 450px 370px 60px;
+  grid-template-rows: 20px 80px 500px 600px 600px 450px 370px 60px;
   grid-template-columns: 1fr; 
 }
 
@@ -31,7 +31,7 @@
                         "contact"
                         "footer";
 
-  grid-template-rows: 20px 100px 465px 500px 60px ;
+  grid-template-rows: 20px 80px 465px 500px 60px ;
   grid-template-columns: 1fr; 
 }
 
@@ -45,7 +45,7 @@
                         "aboutGallery"
                         "footer";
 
-  grid-template-rows: 20px 90px 200px 450px 360px 60px ;
+  grid-template-rows: 20px 80px 200px 450px 360px 60px ;
   grid-template-columns: 1fr; 
 }
 
@@ -141,18 +141,24 @@
 }
 
 .logoWrapper{
-  text-align: center;
-  margin: 5px 0;
-  padding:5px;
-  padding: 0px 0px 0px 90px;
+ margin-top:25px;
 }
 
 .logo{
-  margin-top:-40px;
+  margin-top:-55px;
   position: relative;
-  z-index: -1;
-  height: 120px;
+  z-index: 2;
+  height: 140px;
 }
+
+.hamburger{
+  position: absolute;
+  height:30px;
+  width: 30px; 
+  margin-top: 23px;
+  right:15px;
+}
+
 
 .main{
   grid-area: main;
@@ -423,10 +429,26 @@
   padding-left:3px;
 }
 
+.navWrapper{
+  display:flex;
+}
+
 .navButtonHolder{
-  padding-top:5px;
+  position:absolute;
+  z-index: 2;
+  background-color: white;
+  margin-top:80px;
+  width: 100vw;
+  display:flex;
+  flex-direction:column;
+  left:0;
+  /* padding-top:5px;
   margin-top:-60px;
-  margin-left: -20px;
+  margin-left: -20px; */
+}
+
+.navButtonHolderWide{
+  display:none;
 }
 
 div a {
@@ -865,10 +887,10 @@ div a {
 
 
 @media only screen and (min-width: 350px){
-  .logoWrapper {
+  /* .logoWrapper {
 
     padding: 0px 0px 0px 0px;
-}
+} */
 
 .socailFooter{
   font-size:9px;
@@ -895,7 +917,7 @@ div a {
                           "staffGallery"
                           "footer";
   
-    grid-template-rows: 20px 100px 500px 500px 600px 450px 370px 60px;
+    grid-template-rows: 20px 80px 500px 500px 600px 450px 370px 60px;
     grid-template-columns: 1fr; 
   }
 
@@ -912,10 +934,10 @@ div a {
     color:white;
   
    }
-
+/* 
    .logoWrapper{
      padding: 0px 10px 0px 0px;
-   }
+   } */
 
 
 
@@ -928,7 +950,7 @@ div a {
   }
 
   .aboutWrapper {
-    grid-template-rows: 20px 95px 200px 400px 370px 60px;
+    grid-template-rows: 20px 80px 200px 400px 370px 60px;
 }
  
 }
@@ -942,8 +964,12 @@ div a {
     margin-top:20px;
   }
 
+  .hamburger{
+    right:20px;
+  }
+
   .homeWrapper{
-    grid-template-rows: 20px 90px 500px 450px 600px 450px 375px 60px;
+    grid-template-rows: 20px 60px 500px 450px 600px 450px 375px 60px;
   }
 
   .mainTitle{
@@ -985,7 +1011,7 @@ div a {
   }
 
   .aboutWrapper {
-    grid-template-rows: 20px 95px 250px 360px 370px 60px;
+    grid-template-rows: 20px 80px 250px 360px 370px 60px;
 }
 
 .aboutBlurbParagraph{
@@ -1006,17 +1032,29 @@ div a {
   }
 
   .navButtonHolder{
-    float: right;
+    /* float: right;
     margin-right: 20px;
-    margin-top: 4px;
+    margin-top: 4px; */
+  }
+
+  .navButtonHolderWide{
+    display: flex;
+    position: absolute;
+    margin-top:17px;
+    right: 5%;
+    align-items: center;
+    justify-content: center;
   }
 
   .logo{
-    height: 165px;
-    float:left;
-    padding-left:20px;
-    margin-top: -55px;
+    margin-top: -65px;
+    height:150px;
     }
+
+
+  .hamburger{
+    display:none;
+  }
 
 
 
@@ -1584,10 +1622,10 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   }
 
   .navButtonHolder {
-    float: right;
+    /* float: right;
     margin-right: 70px;
-    margin-top: 40px;
-}
+    margin-top: 40px;*/
+} 
 
   .logo {
     height: 336px;
