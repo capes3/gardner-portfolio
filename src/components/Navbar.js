@@ -34,10 +34,11 @@ class Navbar extends Component {
 
 
             </div>
-            
             <div className="logoWrapper">
                 <img alt={'logo'}src={logo} className="logo"/>
+                <a className="logo-link" href="/"></a>
             </div>
+
 
                 <div className="navButtonHolder">
         

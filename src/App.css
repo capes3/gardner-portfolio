@@ -320,6 +320,7 @@
   width: 200px;
   height: 200px;
   animation: fadeIn 1.5s linear;
+  margin-left:-30px;
 }
 
 .checkmark::after {
@@ -584,6 +585,10 @@ div a {
 .homeContact{
   margin:auto;
   padding-top:20px;
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
 }
 
 .homeContactMap{
@@ -595,7 +600,7 @@ div a {
 }
 
 .contactField{
-  width: 75%;
+  width: 70vw;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -661,7 +666,7 @@ div a {
 }
 
 .messageContactField{
-  width: 75%;
+  width: 70vw;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -841,6 +846,14 @@ div a {
 
 .cosmeticWrapper h2{
   cursor: pointer;
+}
+
+.logo-link{
+  position: absolute;
+  margin-right: 50%;
+  height: 40px;
+  width: 87px;
+  right: -40px;
 }
 
 
@@ -1134,11 +1147,11 @@ div a {
 }
 
   .contactField{
-    width:90%;
+    width:70vw;
   }
 
   .messageContactField{
-    width: 90%;
+    width: 70vw;
   }
 
   .main{
@@ -1239,6 +1252,12 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   top: -45px;
 }
 
+.logo-link{
+  left: 30px;
+  top: 40px;
+  width: 17%;
+}
+
 }
 
 
@@ -1272,8 +1291,8 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 
 .signImg {
   height: 130px;
-  width: 315px;
-  margin-right: -31px;
+  width: 295px;
+  margin-right: -23px;
   border: 5px solid white;
   position: relative;
   right: -315px;
@@ -1372,7 +1391,13 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   padding-top:12%;
 }
 
+.contactField{
+  width: 40vw;
+}
 
+.messageContactField{
+  width: 40vw;
+}
 
 }
 
@@ -1456,7 +1481,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 @media only screen and (min-width: 2560px){
 
   .homeWrapper{
-    grid-template-rows: 45px 125px 690px 450px 900px 800px 500px 120px;
+    grid-template-rows: 45px 165px 690px 450px 900px 800px 500px 120px;
   }
 
   .contactHeader{
@@ -1476,7 +1501,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   .socialHeader{
     position: absolute;
     font-size: 35px;
-    margin-top:-6px;
+    margin-top:0px;
     margin-left:88%;
   }
 
@@ -1602,7 +1627,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 }
 
 .aboutWrapper {
-  grid-template-rows: 45px 125px 450px 750px 500px 120px;
+  grid-template-rows: 45px 165px 450px 750px 500px 120px;
 }
 
 .aboutProceduresButton{
@@ -1648,7 +1673,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 }
 
 .proceduresBanner h1{
-  padding-top:10%;
+  padding-top:0%;
   font-size:80px;
 }
 
@@ -1681,7 +1706,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 }
 
 .contactWrapper{
-  grid-template-rows: 45px 125px 865px 950px 120px ;
+  grid-template-rows: 45px 165px 865px 950px 120px ;
   display:relative;
 }
 
@@ -1745,6 +1770,13 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 
 .header{
   height:50px;
+}
+
+.logo-link{
+  top:4%;
+  left:2%;
+  width:11%;
+  height:5%;
 }
 
 
