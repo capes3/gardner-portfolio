@@ -801,7 +801,7 @@ div a {
 
 .proceduresWrapper{
   position: relative;
-  margin-top: 90px;  
+  margin-top: 25px;  
 }
 
 .proceduresFooter{
@@ -1130,8 +1130,7 @@ div a {
 
  
   .proceduresBanner{
-    margin-top: 75px;
-    top: -30px;
+    margin-top: -65px;
     background-size: 775px 320px;
     background-position: 50% 50%;
 
@@ -1293,9 +1292,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   font-size:1.75em;
 }
 
-.proceduresBanner{
-  top: -45px;
-}
+
 
 .logo-link{
   left: 30px;
@@ -1628,17 +1625,14 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
     font-size: 25px;
   }
 
-  .navButtonHolder {
-    /* float: right;
-    margin-right: 70px;
-    margin-top: 40px;*/
+  .navButtonHolderWide {
+   margin-top:60px;
 } 
 
   .logo {
     height: 336px;
-    float: left;
     padding-left: 30px;
-    margin-top: -90px;
+    bottom: 20px;
 }
 
   .mainTitle {
