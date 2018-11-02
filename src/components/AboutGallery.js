@@ -22,7 +22,6 @@ class AboutGallery extends Component{
             .then(res =>{
                 var public_ids = res.data.resources.map((images, index)=>{ return images.public_id })
                 this.setState({gallery:public_ids})
-                console.log({gallery:public_ids})
             })}
 
     renderNav(){
