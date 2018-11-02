@@ -53,7 +53,7 @@ class Navbar extends Component {
                 
                 <a className="logo" href="/"><img alt={'logo'}src={logo} className="logo"/></a>
             </div>
-                {this.state.open ?<img src={close} className="hamburger" onClick={this.menuClick}/> : <img src={menu} className="hamburger" onClick={this.menuClick}/>}
+                {this.state.open ?<img src={close} className="hamburger" alt="menu icon" onClick={this.menuClick}/> : <img src={menu} className="hamburger" alt ="close icon" onClick={this.menuClick}/>}
                 
 
                         <div className="navButtonHolderWide">
