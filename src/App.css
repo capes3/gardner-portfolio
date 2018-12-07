@@ -145,10 +145,11 @@
 }
 
 .logo{
-  margin-top:-55px;
+  margin-top:-4px;
   position: relative;
   z-index: 2;
-  height: 140px;
+  height: 30px;
+
 }
 
 .hamburger{
@@ -494,7 +495,7 @@ div a {
 .navButtonApptMain{
   display: inline-block;
   padding:0.75em 2em;
-  margin-top:15%;
+  margin-top:15px;
   border-radius:0.85em;
   border:none;
   box-sizing: border-box;
@@ -981,7 +982,7 @@ div a {
   }
 
   .mainTitle{
-    padding-top:35%;
+    padding-top:115px;
   }
 
   .galleryHeading{
@@ -1030,6 +1031,8 @@ div a {
 }
 
 
+
+
 /*/////////////////////////////////////////////////PAGE BREAK /////////////////////////////////////////////////////////////////////////////////////////*/
 
 
@@ -1055,8 +1058,8 @@ div a {
   }
 
   .logo{
-    margin-top: -65px;
-    height:150px;
+    margin-top: -8px;
+    height:30px;
     }
 
 
@@ -1627,13 +1630,13 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   }
 
   .navButtonHolderWide {
-   margin-top:60px;
+   margin-top:48px;
 } 
 
-  .logo {
-    height: 336px;
+  .logo{
+    height: 90px;
     padding-left: 30px;
-    bottom: 20px;
+    bottom: -5px;
 }
 
   .mainTitle {

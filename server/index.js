@@ -7,7 +7,9 @@ const express = require('express')
 
 
 require('dotenv').config()
-var app = express();
+var app = express()
+
+app.use( express.static(`${__dirname}/../build`))
 
 app.use(cors())
 app.use(bodyParser.json())

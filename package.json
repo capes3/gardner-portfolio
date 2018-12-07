@@ -38,6 +38,6 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:3005",
-  "main": "server/index.js",
-  "homepage": "https://github.com/capes3/gardner-portfolio.git"
+  "main": "server/index.js"
+  
 }
