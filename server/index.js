@@ -41,7 +41,7 @@ app.use('/contact',[
         from: `${req.body.firstName}`+`${req.body.lastName}`,
         to:'capener.cade@gmail.com',
         subject: "Contact request from "+`${req.body.firstName}`+" "+`${req.body.lastName}`,
-        text: "First Name:" + `${req.body.firstName}`+" Last Name:" + `${req.body.lastName}`+ " Email: " +`${req.body.email}` +" Message:"+`${req.body.message}`,
+        text: "You've recieved a new message\n First Name:" + `${req.body.firstName}\n`+" Last Name:" + `${req.body.lastName}\n`+ " Email: " +`${req.body.email}\n` +" Message:"+`${req.body.message}`,
 
     }
     transporter.sendMail(mailOptions, function(err, res){
