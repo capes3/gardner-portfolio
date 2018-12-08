@@ -46,8 +46,9 @@ class Procedures extends Component {
 render() {
     return(
         <div>
+            <div className="navProceduresWrapper">
             <Navbar/>
-            
+            </div>           
             <div className="proceduresWrapper">   
             <div className="proceduresBanner">
                     <div className="proceduresOverlay"></div>

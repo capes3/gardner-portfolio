@@ -779,6 +779,10 @@ div a {
   cursor: pointer;
 }
 
+.navProceduresWrapper{
+  height:135px;
+}
+
 .proceduresBanner{
   height:40vh;
   width:100%;
@@ -886,6 +890,8 @@ div a {
   width: 87px;
   right: -40px;
 }
+
+
 
 
 
@@ -1445,6 +1451,9 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   width: 40vw;
 }
 
+.navButtonHolderWide{
+  right:10px;
+}
 }
 
 
@@ -1518,6 +1527,8 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
 .mainTitle{
   padding-top:8%;
 }
+
+
 
 }
 
@@ -1713,6 +1724,10 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   background-size:100% 105%;
   top:-85px;
 
+}
+
+.navProceduresWrapper{
+  height:335px;
 }
 
 .proceduresBanner h1{
