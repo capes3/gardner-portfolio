@@ -391,7 +391,6 @@
 
 .errorAlert{
   display: block;
-  position: absolute;
   padding: 20px;
   background-color: #f44336; /* Red */
   color: white;
@@ -1436,7 +1435,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   display:block;
   height:55%;
   width:55%;
-  margin: -50% 0% 0% 65%;
+  margin: -55% 0% 0% 65%;
 }
 
 .mainTitle{
@@ -1521,7 +1520,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   display:block;
   height:55%;
   width:55%;
-  margin: -35% 0% 0% 65%;
+  margin: -40% 0% 0% 65%;
 }
 
 .mainTitle{
@@ -1781,7 +1780,7 @@ background-image: url(https://maps.googleapis.com/maps/api/staticmap?center=814+
   display:block;
   height:55%;
   width:55%;
-  margin: -45% 0% 0% 65%;
+  margin: -37% 0% 0% 75%;
 }
 
 .contactField{

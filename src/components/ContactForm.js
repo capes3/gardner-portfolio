@@ -69,7 +69,7 @@ class ContactForm extends Component {
 
         if ((this.state.lastName.length < 2)||(this.state.lastName.length > 15) ) {
             isError= true;
-            errors.lastNameError="Invalid First Name"
+            errors.lastNameError="Invalid Last Name"
         }
 
         if(this.state.email.indexOf("@")=== -1){

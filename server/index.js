@@ -24,22 +24,19 @@ app.use('/contact',[
                 host: 'smtp.gmail.com',
 
                     auth: {
-            
                          type: 'OAuth2',
                          user: process.env.USER,
                         clientId: process.env.CLIENT_ID,
                         clientSecret: process.env.CLIENT_SECRET,
                         refreshToken: process.env.REFRESH_TOKEN,
                         accessToken: process.env.ACCESS_TOKEN
-            
-            
                     },
        
     })
 
     const mailOptions = {
         from: `${req.body.firstName}`+`${req.body.lastName}`,
-        to:'capener.cade@gmail.com',
+        to:'gardnerdental@gmail.com',
         subject: "Contact request from "+`${req.body.firstName}`+" "+`${req.body.lastName}`,
         text: "You've recieved a new message\n First Name:" + `${req.body.firstName}\n`+" Last Name:" + `${req.body.lastName}\n`+ " Email: " +`${req.body.email}\n` +" Message:"+`${req.body.message}`,
 
@@ -58,4 +55,6 @@ app.use('/contact',[
 )
 
 
-app.listen(3005, ()=>{console.log('app is listening on 3005')})
+const port = 3005
+
+app.listen(port, ()=>{console.log(`app is listening on ${port}`)})
